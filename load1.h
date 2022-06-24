@@ -2,6 +2,7 @@
 #define LOAD1_H
 #include <QDialog>
 #include <QTimer>
+#include "Global.h"
 namespace Ui {
 class load1;
 }
@@ -21,5 +22,6 @@ private:
     QTimer* timer1;
     QTimer* timer2;
 };
+
 
 #endif // LOAD1_H

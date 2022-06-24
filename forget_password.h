@@ -15,6 +15,9 @@ public:
     explicit forget_password(QWidget *parent = nullptr);
     ~forget_password();
 
+private slots:
+    void on_buttonBox_accepted();
+
 private:
     Ui::forget_password *ui;
 };

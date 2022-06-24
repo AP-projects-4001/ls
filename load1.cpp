@@ -1,6 +1,9 @@
 #include "load1.h"
 #include "ui_load1.h"
 #include"login.h"
+
+QVector <Person>Global::vec_person;
+Person Global::Active_person;
 load1::load1(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::load1)
@@ -11,10 +14,11 @@ load1::load1(QWidget *parent) :
     timer1 = new QTimer (this);
     timer2 = new QTimer (this);
     connect(timer1,SIGNAL(timeout()),this,SLOT(updat()));
-    timer1->start(80);
+    timer1->start(0);
     connect(timer2,SIGNAL(timeout()),this,SLOT(close_this()));
-    timer2->start(8000);
+    timer2->start(80);
 }
+
 
 load1::~load1()
 {

@@ -193,7 +193,7 @@ background-color: rgb();</string>
     <string>Address:</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit">
+  <widget class="QLineEdit" name="lineEdit_name">
    <property name="geometry">
     <rect>
      <x>150</x>
@@ -211,7 +211,7 @@ background-color: rgb();</string>
     <string notr="true">background-image: url();</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_2">
+  <widget class="QLineEdit" name="lineEdit_username">
    <property name="geometry">
     <rect>
      <x>150</x>
@@ -229,7 +229,7 @@ background-color: rgb();</string>
     <string notr="true">background-image: url();</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_3">
+  <widget class="QLineEdit" name="lineEdit_password">
    <property name="geometry">
     <rect>
      <x>150</x>
@@ -247,7 +247,7 @@ background-color: rgb();</string>
     <string notr="true">background-image: url();</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_4">
+  <widget class="QLineEdit" name="lineEdit_repeatpassword">
    <property name="geometry">
     <rect>
      <x>150</x>
@@ -265,7 +265,7 @@ background-color: rgb();</string>
     <string notr="true">background-image: url();</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_5">
+  <widget class="QLineEdit" name="lineEdit_phone">
    <property name="geometry">
     <rect>
      <x>150</x>
@@ -283,7 +283,7 @@ background-color: rgb();</string>
     <string notr="true">background-image: url();</string>
    </property>
   </widget>
-  <widget class="QTextEdit" name="textEdit">
+  <widget class="QTextEdit" name="textEdit_address">
    <property name="geometry">
     <rect>
      <x>150</x>
@@ -301,7 +301,7 @@ background-color: rgb();</string>
     <string notr="true">background-image: url();</string>
    </property>
   </widget>
-  <widget class="QRadioButton" name="radioButton">
+  <widget class="QRadioButton" name="radioButton_clinet">
    <property name="geometry">
     <rect>
      <x>170</x>
@@ -321,7 +321,7 @@ background-color: rgb();</string>
     <string>client</string>
    </property>
   </widget>
-  <widget class="QRadioButton" name="radioButton_2">
+  <widget class="QRadioButton" name="radioButton_customer">
    <property name="geometry">
     <rect>
      <x>280</x>
@@ -344,7 +344,7 @@ background-color: rgb();</string>
   <widget class="QLabel" name="label_8">
    <property name="geometry">
     <rect>
-     <x>36</x>
+     <x>0</x>
      <y>50</y>
      <width>141</width>
      <height>41</height>
@@ -371,7 +371,7 @@ background-color: rgb();</string>
     <rect>
      <x>0</x>
      <y>350</y>
-     <width>51</width>
+     <width>71</width>
      <height>41</height>
     </rect>
    </property>
@@ -391,7 +391,7 @@ background-color: rgb();</string>
     <string>Email :</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_6">
+  <widget class="QLineEdit" name="lineEdit_Email">
    <property name="geometry">
     <rect>
      <x>150</x>

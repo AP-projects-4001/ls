@@ -1,6 +1,9 @@
 #include "create_account.h"
 #include "ui_create_account.h"
-
+#include "QMessageBox"
+#include "QString"
+#include "string"
+bool type{0};
 Create_account::Create_account(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Create_account)
@@ -8,7 +11,61 @@ Create_account::Create_account(QWidget *parent) :
     ui->setupUi(this);
 }
 
+
 Create_account::~Create_account()
 {
     delete ui;
+}
+
+void Create_account::on_buttonBox_accepted()
+{
+    QString name, username, password, password2, phone, address, mail; int type;
+    name=ui->lineEdit_name->text();
+    username=ui->lineEdit_username->text();
+    password=ui->lineEdit_password->text();
+    password2=ui->lineEdit_repeatpassword->text();
+    phone=ui->lineEdit_phone->text();
+    address=ui->textEdit_address->toPlainText();
+    mail=ui->lineEdit_Email->text();
+    type=ui->radioButton_clinet->isChecked();
+    bool t = 0;
+    bool create_successfully=1;
+    Global glob;
+    for (int i = 0; i < glob.vec_person.size(); i++)
+    {
+        if (glob.vec_person[i].get_user_name() == username)
+        {
+            create_successfully=0;
+            QMessageBox *qm=new QMessageBox(this);
+            qm->setText("useranme is token");
+            qm->exec();
+        }
+    }
+    if (password != password2 &&create_successfully)
+    {
+        create_successfully=0;
+        QMessageBox *qm=new QMessageBox(this);
+        qm->setText("those password didn't match");
+        qm->exec();
+    }
+    if (phone.size() != 11 && create_successfully)
+    {
+        create_successfully=0;
+        QMessageBox *qm=new QMessageBox(this);
+        qm->setText("phone number must be have 11 digits");
+        qm->exec();
+    }
+    if (mail.size()>4&&mail.toStdString().find(".com")&& mail.toStdString().find("@") && create_successfully)
+    {
+        create_successfully=0;
+        QMessageBox *qm=new QMessageBox(this);
+        qm->setText("mail must be have at least 5 char and include @ , .com");
+        qm->exec();
+    }
+    if(create_successfully)
+    {
+        glob.Active_person.set(name, username, phone, address, password, mail,0 ,type+1);
+        glob.vec_person.push_back(glob.Active_person);
+        glob.save();
+    }
 }

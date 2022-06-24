@@ -134,7 +134,7 @@ background-color: rgb();</string>
     <string>Name :</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_2">
+  <widget class="QLineEdit" name="lineEdit_password">
    <property name="geometry">
     <rect>
      <x>590</x>

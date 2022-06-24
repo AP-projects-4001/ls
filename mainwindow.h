@@ -15,6 +15,11 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    void on_MainWindow_iconSizeChanged(const QSize &iconSize);
+
+    void on_checkBox_stateChanged();
+
 private:
     Ui::MainWindow *ui;
 };

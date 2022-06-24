@@ -17,6 +17,8 @@ SOURCES += \
     mainwindow.cpp
 
 HEADERS += \
+    Global.h \
+    Person.h \
     create_account.h \
     forget_password.h \
     load1.h \
@@ -37,3 +39,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     pic.qrc
+
+DISTFILES += \
+    save.txt
