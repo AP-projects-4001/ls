@@ -13,7 +13,8 @@ void login::check_correct_password(QString user_name, QString password)
     bool exit1=0;
     for(int i=0;i<glob.vec_person.size();i++)
     {
-        if(user_name==glob.vec_person[i].get_user_name() && password==glob.vec_person[i].get_password())
+        QString u=glob.vec_person[i].get_user_name() , p=glob.vec_person[i].get_password();
+        if(user_name==u && password==p)
         {
             exit1=1;
             glob.Active_person=glob.vec_person[i];
@@ -98,8 +99,6 @@ void login::on_pushButton_Login_clicked()
     if (sum == x)
     {
         check_correct_password(user_name, password);
-    }
-    else{
         int a=rand()%(51);
         int b=rand()%(51);
         sum=a+b;

@@ -18,30 +18,27 @@ public:
     {
 
         Global glob;
-        QFile file("save.txt");
-        if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
+        std::fstream in("save.txt" , std::ios::in);
+        if (!in)
             return;
         else
         {
-            QTextStream stream(&file);
             std::string x , y;
-            std::fstream in("save.txt", std::ios::in);
-
-            std::string name, username, password, password2, phone, address, mail ,type , ban;
-            while (getline(in, name) && getline(in, username) && getline(in, phone) && getline(in, address) && getline(in, password) && getline(in, mail), getline(in, ban) && getline(in, type))
+            std::string name, username, password, password2, phone, address, mail ,type , ban ,moneybags;
+            while (getline(in, name) && getline(in, username) && getline(in, phone) && getline(in, address) && getline(in, password) && getline(in, mail), getline(in, ban) && getline(in, type) && getline(in , moneybags))
             {
                 Person x;
-                x.set( QString::fromStdString(name), QString::fromStdString(username), QString::fromStdString(phone), QString::fromStdString(address), QString::fromStdString(password),QString::fromStdString(mail),stoi(ban), stoi(type));
+                x.set( QString::fromStdString(name), QString::fromStdString(username), QString::fromStdString(phone), QString::fromStdString(address), QString::fromStdString(password),QString::fromStdString(mail),stoi(ban), stoi(type) , stoi(moneybags));
                 glob.vec_person.push_back(x);
             }
-            in.close();
         }
-        file.close();
+        in .close();
         if(glob.vec_person.size()==0)
         {
-            std::string x = "Admin", y = "Admin.gmail.com";
+            std::string x = "Admin", y = "Admin@gmail.com";
             Person admin;
             admin.set(QString::fromStdString(x), QString::fromStdString(x), QString::fromStdString(x), QString::fromStdString(x), QString::fromStdString(x), QString::fromStdString(y), 0, 0);
+            vec_person.push_back(admin);
             save();
         }
     }
@@ -59,7 +56,8 @@ public:
                 << glob.vec_person[i].get_password().toStdString() << "\n"
                 << glob.vec_person[i].get_Mail().toStdString() << "\n"
                 << glob.vec_person[i].get_ban() << "\n"
-                << glob.vec_person[i].get_type() << "\n";
+                << glob.vec_person[i].get_type() << "\n"
+                << glob.vec_person[i].get_moneybags()<<"\n";
         }
         out.close();
     }

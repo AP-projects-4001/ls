@@ -20,6 +20,8 @@ private slots:
 
     void on_checkBox_stateChanged();
 
+    void on_pushButton_clicked();
+
 private:
     Ui::MainWindow *ui;
 };

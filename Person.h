@@ -6,7 +6,7 @@ class Person {
 public:
 
     Person(){}
-    Person(QString Name, QString User_name, QString Phone_number, QString Address, QString Password, QString Mail, bool Ban, int Type)
+    Person(QString Name, QString User_name, QString Phone_number, QString Address, QString Password, QString Mail, bool Ban, int Type , int Moneybags=0)
     {
         name = Name;
         user_name = User_name;
@@ -16,8 +16,9 @@ public:
         ban = Ban;
         type = Type;
         mail = Mail;
+        moneybags=Moneybags;
     }
-    void set(QString Name, QString User_name, QString Phone_number, QString Address, QString Password, QString Mail, bool Ban, int Type)
+    void set(QString Name, QString User_name, QString Phone_number, QString Address, QString Password, QString Mail, bool Ban, int Type ,int Moneybags=0)
     {
         name = Name;
         user_name = User_name;
@@ -27,6 +28,7 @@ public:
         ban = Ban;
         type = Type;
         mail = Mail;
+        moneybags=Moneybags;
     }
 
     void set_password(QString Password) { password = Password;}
@@ -37,7 +39,8 @@ public:
     QString get_password() { return password;}
     QString get_Mail() { return mail;}
     bool get_ban() { return ban;}
-    int get_type() { return type;};
+    int get_type() { return type;}
+    int get_moneybags(){return moneybags;}
 
 private:
     QString name;
@@ -48,5 +51,6 @@ private:
     QString mail;
     bool ban;
     int type;
+    int moneybags{0};
 };
 #endif // PERSON_H

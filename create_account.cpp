@@ -28,6 +28,12 @@ void Create_account::on_buttonBox_accepted()
     address=ui->textEdit_address->toPlainText();
     mail=ui->lineEdit_Email->text();
     type=ui->radioButton_clinet->isChecked();
+    if(type>0)
+    {
+        type =1;
+    }
+    else
+        type=2;
     bool t = 0;
     bool create_successfully=1;
     Global glob;
@@ -55,16 +61,16 @@ void Create_account::on_buttonBox_accepted()
         qm->setText("phone number must be have 11 digits");
         qm->exec();
     }
-    if (mail.size()>4&&mail.toStdString().find(".com")&& mail.toStdString().find("@") && create_successfully)
+    if ((!mail.toStdString().find(".com") || !mail.toStdString().find("@")) && create_successfully)
     {
         create_successfully=0;
         QMessageBox *qm=new QMessageBox(this);
-        qm->setText("mail must be have at least 5 char and include @ , .com");
+        qm->setText("mail must be have @ , .com");
         qm->exec();
     }
     if(create_successfully)
     {
-        glob.Active_person.set(name, username, phone, address, password, mail,0 ,type+1);
+        glob.Active_person.set(name, username, phone, address, password, mail,0 ,type);
         glob.vec_person.push_back(glob.Active_person);
         glob.save();
     }
