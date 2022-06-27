@@ -1,16 +1,16 @@
-#include "client.h"
-#include "ui_client.h"
+#include "cart.h"
+#include "ui_cart.h"
 
-Client::Client(QWidget *parent) :
+Cart::Cart(QWidget *parent) :
     QDialog(parent),
-    ui(new Ui::Client)
+    ui(new Ui::Cart)
 {
     ui->setupUi(this);
     this->setFixedSize(1241,688);
     setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
 }
 
-Client::~Client()
+Cart::~Cart()
 {
     delete ui;
 }

@@ -1,13 +1,24 @@
 <RCC>
     <qresource prefix="/new/prefix1">
-        <file>login.png</file>
-        <file>start.png</file>
+        <file>add to cart.png</file>
+        <file>Back.png</file>
+        <file>Buy.png</file>
+        <file>cancel.png</file>
+        <file>cart.png</file>
+        <file>creat.png</file>
         <file>creat_account.png</file>
         <file>forget.png</file>
-        <file>Search.png</file>
-        <file>wallet.png</file>
+        <file>iranserver.gif</file>
         <file>log out.png</file>
+        <file>login.png</file>
+        <file>loginbotten.png</file>
         <file>logo.png</file>
-        <file>cart.png</file>
+        <file>page cart.png</file>
+        <file>Search.png</file>
+        <file>start.png</file>
+        <file>total price.png</file>
+        <file>wallet.png</file>
+        <file>XXwt.gif</file>
+        <file>remove cart.png</file>
     </qresource>
 </RCC>

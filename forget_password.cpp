@@ -7,6 +7,8 @@ forget_password::forget_password(QWidget *parent) :
     ui(new Ui::forget_password)
 {
     ui->setupUi(this);
+    this->setFixedSize(954,581);
+    setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
 }
 
 forget_password::~forget_password()

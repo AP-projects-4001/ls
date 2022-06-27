@@ -19,7 +19,7 @@
   <widget class="QLineEdit" name="lineEdit_name">
    <property name="geometry">
     <rect>
-     <x>590</x>
+     <x>600</x>
      <y>160</y>
      <width>341</width>
      <height>41</height>
@@ -47,7 +47,6 @@
     <font>
      <family>Segoe UI</family>
      <pointsize>10</pointsize>
-     <weight>75</weight>
      <bold>true</bold>
     </font>
    </property>
@@ -62,7 +61,7 @@ background-color: rgb();</string>
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>500</x>
+     <x>510</x>
      <y>220</y>
      <width>101</width>
      <height>41</height>
@@ -72,7 +71,6 @@ background-color: rgb();</string>
     <font>
      <family>Segoe UI</family>
      <pointsize>10</pointsize>
-     <weight>75</weight>
      <bold>true</bold>
     </font>
    </property>
@@ -97,7 +95,6 @@ background-color: rgb();</string>
     <font>
      <family>Segoe UI</family>
      <pointsize>10</pointsize>
-     <weight>75</weight>
      <bold>true</bold>
     </font>
    </property>
@@ -112,7 +109,7 @@ background-color: rgb();</string>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>500</x>
+     <x>510</x>
      <y>160</y>
      <width>61</width>
      <height>41</height>
@@ -122,7 +119,6 @@ background-color: rgb();</string>
     <font>
      <family>Segoe UI</family>
      <pointsize>10</pointsize>
-     <weight>75</weight>
      <bold>true</bold>
     </font>
    </property>
@@ -137,7 +133,7 @@ background-color: rgb();</string>
   <widget class="QLineEdit" name="lineEdit_password">
    <property name="geometry">
     <rect>
-     <x>590</x>
+     <x>600</x>
      <y>220</y>
      <width>341</width>
      <height>41</height>
@@ -174,24 +170,24 @@ background-color: rgb();</string>
   <widget class="QPushButton" name="pushButton_Login">
    <property name="geometry">
     <rect>
-     <x>600</x>
+     <x>590</x>
      <y>380</y>
-     <width>111</width>
-     <height>41</height>
+     <width>117</width>
+     <height>52</height>
     </rect>
    </property>
    <property name="font">
     <font>
      <pointsize>10</pointsize>
-     <weight>75</weight>
      <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-image: url();</string>
+    <string notr="true">background-image: url(:/new/prefix1/loginbotten.png);
+background-color: rgb(31, 100, 194);</string>
    </property>
    <property name="text">
-    <string>Login</string>
+    <string/>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_Creat">
@@ -199,29 +195,37 @@ background-color: rgb();</string>
     <rect>
      <x>750</x>
      <y>380</y>
-     <width>171</width>
-     <height>41</height>
+     <width>176</width>
+     <height>52</height>
     </rect>
    </property>
    <property name="font">
     <font>
      <pointsize>10</pointsize>
-     <weight>75</weight>
      <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-image: url();
-background-color: rgb(0, 139, 0);</string>
+    <string notr="true">background-color: rgb(31, 100, 194);
+background-image: url(:/new/prefix1/creat.png);</string>
    </property>
    <property name="text">
-    <string>Creat new Account</string>
+    <string/>
+   </property>
+   <property name="shortcut">
+    <string/>
+   </property>
+   <property name="default">
+    <bool>false</bool>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
    </property>
   </widget>
   <widget class="QCommandLinkButton" name="commandLinkButton">
    <property name="geometry">
     <rect>
-     <x>560</x>
+     <x>570</x>
      <y>260</y>
      <width>221</width>
      <height>31</height>

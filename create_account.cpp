@@ -9,6 +9,8 @@ Create_account::Create_account(QWidget *parent) :
     ui(new Ui::Create_account)
 {
     ui->setupUi(this);
+    this->setFixedSize(954,581);
+    setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
 }
 
 
