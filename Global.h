@@ -18,6 +18,8 @@ public:
     {
 
         Global glob;
+        std::fstream u("save.txt",std::ios::app);
+        u.close();
         std::fstream in("save.txt" , std::ios::in);
         if (!in)
             return;

@@ -4,5 +4,10 @@
         <file>start.png</file>
         <file>creat_account.png</file>
         <file>forget.png</file>
+        <file>Search.png</file>
+        <file>wallet.png</file>
+        <file>log out.png</file>
+        <file>logo.png</file>
+        <file>cart.png</file>
     </qresource>
 </RCC>
