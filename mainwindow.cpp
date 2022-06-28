@@ -8,6 +8,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->lcdNumber->setDigitCount(9);
     ui->lcdNumber->display(76);
     ui->lcdNumber->display(ui->lcdNumber->value()+1);
+    ui->pushButton->hide();
 }
 
 MainWindow::~MainWindow()
@@ -30,4 +31,10 @@ void MainWindow::on_pushButton_clicked()
 {
     ui->graphicsView->setStyleSheet("background-image:url(:/new/prefix1/creat_account.png);");
 
+}
+
+void MainWindow::on_comboBox_currentIndexChanged(const QString &arg1)
+{
+    ui->pushButton->setText(arg1);
+    ui->pushButton->show();
 }

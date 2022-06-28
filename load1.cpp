@@ -1,9 +1,12 @@
 #include "load1.h"
 #include "ui_load1.h"
 #include"login.h"
-
+#include "article.h"
 QVector <Person>Global::vec_person;
 Person Global::Active_person;
+QVector <cloths>Global::vec_article_cloths;
+QVector <QPair<QPair<int,QString> , QPair<QString , int>>> Global::vec_of_Buyer;
+QVector<Sporting_goods> Global::vec_article_sporting_goods;
 load1::load1(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::load1)

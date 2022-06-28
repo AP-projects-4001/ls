@@ -7,18 +7,11 @@
 #include"client.h"
 #include"add_to_cart.h"
 #include"cart.h"
+#include "client.h"
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    load1 Q;
-    //Global x;
-    //Client g;
-    //x.load();
-    //Q.show();
-    //g.show();
-    //add_to_cart k;
-    //k.show();
-    Cart j;
-    j.show();
+    Client x;
+    x.show();
     return a.exec();
 }

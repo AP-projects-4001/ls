@@ -9,28 +9,35 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    Global.cpp \
     add_to_cart.cpp \
+    article.cpp \
     cart.cpp \
     client.cpp \
+    cloths.cpp \
     create_account.cpp \
     forget_password.cpp \
     load1.cpp \
     login.cpp \
     main.cpp \
     mainwindow.cpp \
+    sporting_goods.cpp \
     transaction.cpp
 
 HEADERS += \
     Global.h \
     Person.h \
     add_to_cart.h \
+    article.h \
     cart.h \
     client.h \
+    cloths.h \
     create_account.h \
     forget_password.h \
     load1.h \
     login.h \
     mainwindow.h \
+    sporting_goods.h \
     transaction.h
 
 FORMS += \

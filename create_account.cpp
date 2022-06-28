@@ -36,7 +36,7 @@ void Create_account::on_buttonBox_accepted()
     }
     else
         type=2;
-    bool t = 0;
+    //bool t = 0;
     bool create_successfully=1;
     Global glob;
     for (int i = 0; i < glob.vec_person.size(); i++)

@@ -82,7 +82,7 @@ void Client::serch(QString name, int min, int max, QString color, QString brand,
 void Client::show_item()
 {
     //if(ui->listWidget_commodity.siz)
-    //ui->listWidget_commodity->clear();
+    ui->listWidget_commodity->clear();
    // bool t=0;
     for(int i=0;i<item_widget_cloths.size();i++)
     {

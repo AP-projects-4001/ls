@@ -39,7 +39,7 @@ background-image: url();</string>
   <widget class="QPushButton" name="pushButton_romove">
    <property name="geometry">
     <rect>
-     <x>547</x>
+     <x>550</x>
      <y>40</y>
      <width>84</width>
      <height>83</height>
@@ -98,6 +98,7 @@ background-image: url();</string>
    <property name="font">
     <font>
      <pointsize>12</pointsize>
+     <weight>75</weight>
      <bold>true</bold>
     </font>
    </property>

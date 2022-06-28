@@ -27,7 +27,7 @@
      <string notr="true">background-image: url(:/new/prefix1/creat_account.png);</string>
     </property>
     <property name="text">
-     <string>PushButton</string>
+     <string/>
     </property>
    </widget>
    <widget class="QGraphicsView" name="graphicsView">
@@ -49,6 +49,26 @@
       <height>23</height>
      </rect>
     </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>450</y>
+      <width>73</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>a</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>b</string>
+     </property>
+    </item>
    </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
