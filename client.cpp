@@ -2,6 +2,7 @@
 #include "ui_client.h"
 #include "login.h"
 #include "cart.h"
+#include<QChar>
 Client::Client(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Client)
@@ -82,20 +83,21 @@ void Client::serch(QString name, int min, int max, QString color, QString brand,
 void Client::show_item()
 {
     //if(ui->listWidget_commodity.siz)
-    //ui->listWidget_commodity->clear();
+        ui->listWidget_commodity->count();
+        //ui->listWidget_commodity->clear();
    // bool t=0;
     for(int i=0;i<item_widget_cloths.size();i++)
     {
        // t=1;
-         QListWidgetItem *x=new QListWidgetItem(QIcon(item_widget_cloths[i].get_image_file()),QString::number(item_widget_cloths[i].get_id())+"\n"+item_widget_cloths[i].get_name()+"\n"+item_widget_cloths[i].get_price());
-         ui->listWidget_commodity->addItem(x);
+        // QListWidgetItem *x=new QListWidgetItem(QIcon(item_widget_cloths[i].get_image_file()),QString::number(item_widget_cloths[i].get_id())+"\n"+item_widget_cloths[i].get_name()+"\n"+item_widget_cloths[i].get_price());
+        // ui->listWidget_commodity->addItem(x);
     }
     for(int i=0;i<item_widget_sporting.size();i++)
     {
 
          //t=1;
-         QListWidgetItem *x=new QListWidgetItem(QIcon(item_widget_sporting[i].get_image_file()),QString::number(item_widget_sporting[i].get_id())+"\n"+item_widget_sporting[i].get_name()+"\n"+item_widget_cloths[i].get_price());
-         ui->listWidget_commodity->addItem(x);
+         //QListWidgetItem *x=new QListWidgetItem(QIcon(item_widget_sporting[i].get_image_file()),QString::number(item_widget_sporting[i].get_id())+"\n"+item_widget_sporting[i].get_name()+"\n"+item_widget_cloths[i].get_price());
+         //ui->listWidget_commodity->addItem(x);
     }
 
 }

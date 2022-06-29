@@ -11,6 +11,7 @@ CONFIG += c++17
 SOURCES += \
     Global.cpp \
     add_to_cart.cpp \
+    admin.cpp \
     article.cpp \
     cart.cpp \
     client.cpp \
@@ -18,16 +19,20 @@ SOURCES += \
     create_account.cpp \
     forget_password.cpp \
     load1.cpp \
+    load2.cpp \
+    load3.cpp \
     login.cpp \
     main.cpp \
     mainwindow.cpp \
     sporting_goods.cpp \
-    transaction.cpp
+    transaction.cpp \
+    widget_kala.cpp
 
 HEADERS += \
     Global.h \
     Person.h \
     add_to_cart.h \
+    admin.h \
     article.h \
     cart.h \
     client.h \
@@ -35,21 +40,28 @@ HEADERS += \
     create_account.h \
     forget_password.h \
     load1.h \
+    load2.h \
+    load3.h \
     login.h \
     mainwindow.h \
     sporting_goods.h \
-    transaction.h
+    transaction.h \
+    widget_kala.h
 
 FORMS += \
     add_to_cart.ui \
+    admin.ui \
     cart.ui \
     client.ui \
     create_account.ui \
     forget_password.ui \
     load1.ui \
+    load2.ui \
+    load3.ui \
     login.ui \
     mainwindow.ui \
-    transaction.ui
+    transaction.ui \
+    widget_kala.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
