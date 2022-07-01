@@ -178,6 +178,22 @@ void Global::load_buyer()
     in .close();
 }
 
+int Global::serch_id_cloths(int id)
+{
+    for(int i=0;i<vec_article_cloths.size();i++)
+        if (vec_article_cloths[i].get_id()==id)
+               return i;
+    return -1;
+}
+
+int Global::serch_id_sporting_goods(int id)
+{
+    for(int i=0;i<vec_article_sporting_goods.size();i++)
+        if (vec_article_sporting_goods[i].get_id()==id)
+               return i;
+    return -1;
+}
+
 
 int Global::get_number_of_article()
 {

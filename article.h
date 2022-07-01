@@ -26,7 +26,7 @@ public:
     QString get_name();
 
 protected:
-    int type;
+    int type;//0 for cloths 1 for sporting_goods
     QString name;
     QString image_File;
     QString seller_username;

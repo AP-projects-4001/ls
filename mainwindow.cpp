@@ -5,9 +5,6 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    ui->lcdNumber->setDigitCount(9);
-    ui->lcdNumber->display(76);
-    ui->lcdNumber->display(ui->lcdNumber->value()+1);
     ui->pushButton->hide();
 }
 
@@ -27,11 +24,6 @@ void MainWindow::on_checkBox_stateChanged()
     //x1 x2;
 }
 
-void MainWindow::on_pushButton_clicked()
-{
-    ui->graphicsView->setStyleSheet("background-image:url(:/new/prefix1/creat_account.png);");
-
-}
 
 void MainWindow::on_comboBox_currentIndexChanged(const QString &arg1)
 {

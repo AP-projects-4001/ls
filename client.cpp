@@ -3,6 +3,8 @@
 #include "login.h"
 #include "cart.h"
 #include<QChar>
+#include "widget_kala.h"
+int Client::count{0};
 Client::Client(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Client)
@@ -16,6 +18,8 @@ Client::Client(QWidget *parent) :
 
 void Client::serch(QString name, int min, int max, QString color, QString brand, QString weight, QString Qtype, QString gender)
 {
+    item_widget_cloths.clear();
+    item_widget_sporting.clear();
     int min_weight;
     int max_weight;
     if (weight[0]=='0')
@@ -82,22 +86,34 @@ void Client::serch(QString name, int min, int max, QString color, QString brand,
 
 void Client::show_item()
 {
-    //if(ui->listWidget_commodity.siz)
-        ui->listWidget_commodity->count();
-        //ui->listWidget_commodity->clear();
-   // bool t=0;
-    for(int i=0;i<item_widget_cloths.size();i++)
+    if(count!=0)
     {
-       // t=1;
-        // QListWidgetItem *x=new QListWidgetItem(QIcon(item_widget_cloths[i].get_image_file()),QString::number(item_widget_cloths[i].get_id())+"\n"+item_widget_cloths[i].get_name()+"\n"+item_widget_cloths[i].get_price());
-        // ui->listWidget_commodity->addItem(x);
+        ui->listWidget_commodity->clear();
+        count=0;
     }
-    for(int i=0;i<item_widget_sporting.size();i++)
+    count=item_widget_cloths.size()+item_widget_sporting.size();
+    if(count>0)
     {
+        for(int i=0;i<item_widget_cloths.size();i++)
+        {
+           // t=1;
+             QListWidgetItem *m_ulitems = new QListWidgetItem;
+             widget_kala *m = new widget_kala;
+             m->set(item_widget_cloths[i].get_image_file(),item_widget_cloths[i].get_name(),item_widget_cloths[i].get_color(),item_widget_cloths[i].get_price());
+             ui->listWidget_commodity->addItem(m_ulitems);
+             ui->listWidget_commodity->setItemWidget(m_ulitems,m);
 
-         //t=1;
-         //QListWidgetItem *x=new QListWidgetItem(QIcon(item_widget_sporting[i].get_image_file()),QString::number(item_widget_sporting[i].get_id())+"\n"+item_widget_sporting[i].get_name()+"\n"+item_widget_cloths[i].get_price());
-         //ui->listWidget_commodity->addItem(x);
+        }
+        for(int i=0;i<item_widget_sporting.size();i++)
+        {
+
+             //t=1;
+            QListWidgetItem *m_ulitems = new QListWidgetItem;
+            widget_kala *m =new widget_kala;
+            m->set(item_widget_sporting[i].get_image_file(),item_widget_sporting[i].get_name(),item_widget_sporting[i].get_color(),item_widget_sporting[i].get_price());
+            ui->listWidget_commodity->addItem(m_ulitems);
+            ui->listWidget_commodity->setItemWidget(m_ulitems,m);
+        }
     }
 
 }
@@ -190,3 +206,12 @@ void Client::on_comboBox_sex_currentIndexChanged(const QString &arg1)
     Gender=arg1;
     serch(Name,Min,Max,Color,Brand,Weight,Type,Gender);
 }
+
+
+void Client::on_listWidget_commodity_itemDoubleClicked(QListWidgetItem *item)
+{
+   // int o=ui->listWidget_commodity->indexFromItem(item).row();
+}
+
+
+

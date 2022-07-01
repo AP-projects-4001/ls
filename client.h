@@ -6,6 +6,7 @@
 #include "article.h"
 #include "sporting_goods.h"
 #include "cloths.h"
+#include "QListWidgetItem"
 namespace Ui {
 class Client;
 }
@@ -19,8 +20,10 @@ public:
     void serch(QString name="" , int min=0 , int max=100000000 , QString color="" , QString brand="" , QString weight="",QString qtype="",QString gender="");
     void show_item();
     void add_global_to_item_widget();
+    static int count;
 
     ~Client();
+
 
 private slots:
     void on_pushButton_logout_clicked();
@@ -45,6 +48,8 @@ private slots:
 
     void on_comboBox_sex_currentIndexChanged(const QString &arg1);
 
+    void on_listWidget_commodity_itemDoubleClicked(QListWidgetItem *item);
+
 private:
     Ui::Client *ui;
     QString Name{""};
@@ -58,5 +63,6 @@ private:
     QVector <Sporting_goods> item_widget_sporting;
     QVector <cloths> item_widget_cloths;
 };
+
 
 #endif // CLIENT_H

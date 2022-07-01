@@ -15,8 +15,13 @@ public:
     explicit Cart(QWidget *parent = nullptr);
     ~Cart();
 
+private slots:
+    void on_pushButton_close_clicked();
+
 private:
     Ui::Cart *ui;
+    int sum=0;
+
 };
 
 #endif // CART_H

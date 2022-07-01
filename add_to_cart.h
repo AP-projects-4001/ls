@@ -14,9 +14,14 @@ class add_to_cart : public QDialog
 public:
     explicit add_to_cart(QWidget *parent = nullptr);
     ~add_to_cart();
+    void set(int id);
+
+private slots:
+    void on_pushButton_clicked();
 
 private:
     Ui::add_to_cart *ui;
+    int id;
 };
 
 #endif // ADD_TO_CART_H

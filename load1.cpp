@@ -7,6 +7,7 @@ Person Global::Active_person;
 QVector <cloths>Global::vec_article_cloths;
 QVector <QPair<QPair<int,QString> , QPair<QString , int>>> Global::vec_of_Buyer;
 QVector<Sporting_goods> Global::vec_article_sporting_goods;
+QVector<int> Global::Shopping_cart;
 load1::load1(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::load1)

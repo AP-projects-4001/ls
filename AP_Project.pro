@@ -23,7 +23,6 @@ SOURCES += \
     load3.cpp \
     login.cpp \
     main.cpp \
-    mainwindow.cpp \
     sporting_goods.cpp \
     transaction.cpp \
     widget_kala.cpp
@@ -43,7 +42,6 @@ HEADERS += \
     load2.h \
     load3.h \
     login.h \
-    mainwindow.h \
     sporting_goods.h \
     transaction.h \
     widget_kala.h
@@ -59,7 +57,6 @@ FORMS += \
     load2.ui \
     load3.ui \
     login.ui \
-    mainwindow.ui \
     transaction.ui \
     widget_kala.ui
 
