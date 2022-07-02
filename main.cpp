@@ -7,10 +7,13 @@
 #include"add_to_cart.h"
 #include"cart.h"
 #include "client.h"
+#include "test.h"
+#include"edituser.h"
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    Client x;
-    x.show();
+   // Client x;
+   EditUser x;
+   x.show();
     return a.exec();
 }

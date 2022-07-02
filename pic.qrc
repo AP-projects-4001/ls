@@ -23,5 +23,11 @@
         <file>loadi1_txt.png</file>
         <file>lod2.gif</file>
         <file>lod3.gif</file>
+        <file>user.png</file>
+        <file>save.png</file>
+        <file>cancel_dialog.png</file>
+        <file>ban.png</file>
+        <file>delete.png</file>
+        <file>BitcoinAd.gif</file>
     </qresource>
 </RCC>

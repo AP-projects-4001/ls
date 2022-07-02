@@ -262,7 +262,7 @@ background-image: url(:/new/prefix1/cancel.png);</string>
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>260</y>
+      <y>270</y>
       <width>111</width>
       <height>41</height>
      </rect>

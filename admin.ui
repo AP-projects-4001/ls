@@ -16,26 +16,35 @@
   <property name="styleSheet">
    <string notr="true">background-color: rgb(0, 0, 61);</string>
   </property>
-  <widget class="QListWidget" name="listWidget">
+  <widget class="QListWidget" name="listWidget_user">
    <property name="geometry">
     <rect>
      <x>20</x>
      <y>160</y>
-     <width>431</width>
-     <height>491</height>
+     <width>311</width>
+     <height>511</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
+   <property name="verticalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOn</enum>
+   </property>
+   <property name="autoScrollMargin">
+    <number>4</number>
+   </property>
+   <property name="editTriggers">
+    <set>QAbstractItemView::DoubleClicked</set>
+   </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="pushButton_log_out">
    <property name="geometry">
     <rect>
      <x>1150</x>
      <y>10</y>
      <width>93</width>
-     <height>71</height>
+     <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -45,17 +54,26 @@
     <string/>
    </property>
   </widget>
-  <widget class="QListWidget" name="listWidget_2">
+  <widget class="QListWidget" name="listWidget_Transactions">
    <property name="geometry">
     <rect>
-     <x>540</x>
+     <x>340</x>
      <y>160</y>
-     <width>611</width>
-     <height>491</height>
+     <width>461</width>
+     <height>511</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="verticalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOn</enum>
+   </property>
+   <property name="autoScrollMargin">
+    <number>4</number>
+   </property>
+   <property name="editTriggers">
+    <set>QAbstractItemView::NoEditTriggers</set>
    </property>
   </widget>
   <widget class="QLabel" name="label">
@@ -63,7 +81,7 @@
     <rect>
      <x>20</x>
      <y>90</y>
-     <width>431</width>
+     <width>311</width>
      <height>61</height>
     </rect>
    </property>
@@ -86,9 +104,9 @@
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>540</x>
+     <x>340</x>
      <y>90</y>
-     <width>611</width>
+     <width>461</width>
      <height>61</height>
     </rect>
    </property>
@@ -103,6 +121,53 @@
    </property>
    <property name="text">
     <string>Transactions</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="listWidget_commodity">
+   <property name="geometry">
+    <rect>
+     <x>810</x>
+     <y>160</y>
+     <width>411</width>
+     <height>511</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="verticalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOn</enum>
+   </property>
+   <property name="autoScrollMargin">
+    <number>4</number>
+   </property>
+   <property name="editTriggers">
+    <set>QAbstractItemView::DoubleClicked</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>810</x>
+     <y>90</y>
+     <width>411</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>16</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(57, 113, 170);</string>
+   </property>
+   <property name="text">
+    <string>commodity</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
