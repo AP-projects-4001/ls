@@ -9,11 +9,12 @@
 #include "client.h"
 #include "test.h"
 #include"edituser.h"
+#include "widget_show_kala_customer.h"
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
    // Client x;
-   EditUser x;
+   test x;
    x.show();
     return a.exec();
 }

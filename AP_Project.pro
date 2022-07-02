@@ -10,6 +10,7 @@ CONFIG += c++17
 
 SOURCES += \
     Global.cpp \
+    add_kala.cpp \
     add_to_cart.cpp \
     admin.cpp \
     article.cpp \
@@ -17,6 +18,7 @@ SOURCES += \
     client.cpp \
     cloths.cpp \
     create_account.cpp \
+    customer.cpp \
     edituser.cpp \
     forget_password.cpp \
     load1.cpp \
@@ -28,12 +30,14 @@ SOURCES += \
     test.cpp \
     transaction.cpp \
     widget_kala.cpp \
+    widget_show_kala_customer.cpp \
     widget_transactions.cpp \
     widget_user.cpp
 
 HEADERS += \
     Global.h \
     Person.h \
+    add_kala.h \
     add_to_cart.h \
     admin.h \
     article.h \
@@ -41,6 +45,7 @@ HEADERS += \
     client.h \
     cloths.h \
     create_account.h \
+    customer.h \
     edituser.h \
     forget_password.h \
     load1.h \
@@ -51,15 +56,18 @@ HEADERS += \
     test.h \
     transaction.h \
     widget_kala.h \
+    widget_show_kala_customer.h \
     widget_transactions.h \
     widget_user.h
 
 FORMS += \
+    add_kala.ui \
     add_to_cart.ui \
     admin.ui \
     cart.ui \
     client.ui \
     create_account.ui \
+    customer.ui \
     edituser.ui \
     forget_password.ui \
     load1.ui \
@@ -69,6 +77,7 @@ FORMS += \
     test.ui \
     transaction.ui \
     widget_kala.ui \
+    widget_show_kala_customer.ui \
     widget_transactions.ui \
     widget_user.ui
 

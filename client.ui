@@ -561,7 +561,7 @@ border-color: rgb(0, 0, 0);
     </property>
     <property name="font">
      <font>
-      <pointsize>9</pointsize>
+      <pointsize>10</pointsize>
       <bold>true</bold>
      </font>
     </property>

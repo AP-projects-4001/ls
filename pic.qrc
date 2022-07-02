@@ -29,5 +29,12 @@
         <file>ban.png</file>
         <file>delete.png</file>
         <file>BitcoinAd.gif</file>
+        <file>add_kala.png</file>
+        <file>delete_kala.png</file>
+        <file>factor.png</file>
+        <file>change photo.png</file>
+        <file>add photo.png</file>
+        <file>null.png</file>
+        <file>chador.png</file>
     </qresource>
 </RCC>

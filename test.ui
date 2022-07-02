@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>828</width>
+    <width>1137</width>
     <height>725</height>
    </rect>
   </property>
@@ -16,10 +16,10 @@
   <widget class="QListWidget" name="listWidget">
    <property name="geometry">
     <rect>
-     <x>200</x>
+     <x>20</x>
      <y>100</y>
-     <width>440</width>
-     <height>511</height>
+     <width>1031</width>
+     <height>501</height>
     </rect>
    </property>
    <property name="verticalScrollBarPolicy">
