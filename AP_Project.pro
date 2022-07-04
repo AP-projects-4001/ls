@@ -20,6 +20,7 @@ SOURCES += \
     create_account.cpp \
     customer.cpp \
     edituser.cpp \
+    factor.cpp \
     forget_password.cpp \
     load1.cpp \
     load2.cpp \
@@ -29,6 +30,7 @@ SOURCES += \
     sporting_goods.cpp \
     test.cpp \
     transaction.cpp \
+    transaction_customer.cpp \
     widget_kala.cpp \
     widget_show_kala_customer.cpp \
     widget_transactions.cpp \
@@ -47,6 +49,7 @@ HEADERS += \
     create_account.h \
     customer.h \
     edituser.h \
+    factor.h \
     forget_password.h \
     load1.h \
     load2.h \
@@ -55,6 +58,7 @@ HEADERS += \
     sporting_goods.h \
     test.h \
     transaction.h \
+    transaction_customer.h \
     widget_kala.h \
     widget_show_kala_customer.h \
     widget_transactions.h \
@@ -69,6 +73,7 @@ FORMS += \
     create_account.ui \
     customer.ui \
     edituser.ui \
+    factor.ui \
     forget_password.ui \
     load1.ui \
     load2.ui \
@@ -76,6 +81,7 @@ FORMS += \
     login.ui \
     test.ui \
     transaction.ui \
+    transaction_customer.ui \
     widget_kala.ui \
     widget_show_kala_customer.ui \
     widget_transactions.ui \

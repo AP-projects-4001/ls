@@ -48,6 +48,10 @@ background-color: rgb();</string>
      <height>26</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(209, 209, 209);
+background-image: url();</string>
+   </property>
    <item>
     <property name="text">
      <string/>
@@ -152,6 +156,10 @@ background-color: rgb();</string>
      <height>26</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(209, 209, 209);
+background-image: url();</string>
+   </property>
    <item>
     <property name="text">
      <string/>
@@ -181,6 +189,10 @@ background-color: rgb();</string>
      <width>311</width>
      <height>26</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(209, 209, 209);
+background-image: url();</string>
    </property>
    <item>
     <property name="text">
@@ -445,7 +457,8 @@ background-color: rgb();</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
+    <string notr="true">background-color: rgb(209, 209, 209);
+background-image: url();</string>
    </property>
    <property name="maximum">
     <number>999999999</number>
@@ -456,7 +469,7 @@ background-color: rgb();</string>
     <rect>
      <x>500</x>
      <y>640</y>
-     <width>131</width>
+     <width>171</width>
      <height>29</height>
     </rect>
    </property>
@@ -468,10 +481,14 @@ background-color: rgb();</string>
    <property name="geometry">
     <rect>
      <x>790</x>
-     <y>560</y>
+     <y>565</y>
      <width>311</width>
      <height>26</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(209, 209, 209);
+background-image: url();</string>
    </property>
    <item>
     <property name="text">

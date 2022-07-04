@@ -31,9 +31,18 @@
         <file>BitcoinAd.gif</file>
         <file>add_kala.png</file>
         <file>delete_kala.png</file>
-        <file>factor.png</file>
         <file>change photo.png</file>
         <file>add photo.png</file>
         <file>null.png</file>
+        <file>traconesh.png</file>
+        <file>Second password.png</file>
+        <file>cancel for kala.png</file>
+        <file>Patment.png</file>
+        <file>internet.png</file>
+        <file>confrim.png</file>
+        <file>cancel fot traconsh.png</file>
+        <file>factor.png</file>
+        <file>Previous.png</file>
+        <file>Next.png</file>
     </qresource>
 </RCC>

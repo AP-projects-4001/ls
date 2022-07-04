@@ -14,7 +14,8 @@
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(0, 0, 62);</string>
+   <string notr="true">background-color: rgb(0, 0, 62);
+background-image: url();</string>
   </property>
   <widget class="QLineEdit" name="lineEdit_serch">
    <property name="geometry">
@@ -26,7 +27,8 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
+    <string notr="true">background-color: rgb(255, 255, 255);
+background-image: url();</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_serch">
@@ -148,7 +150,7 @@ background-image: url();</string>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);
 border-color: rgb(0, 0, 0);
-</string>
+background-image: url();</string>
    </property>
    <widget class="Line" name="line">
     <property name="geometry">
@@ -163,6 +165,9 @@ border-color: rgb(0, 0, 0);
      <font>
       <bold>false</bold>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url();</string>
     </property>
     <property name="frameShadow">
      <enum>QFrame::Plain</enum>
@@ -179,6 +184,9 @@ border-color: rgb(0, 0, 0);
       <width>351</width>
       <height>20</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url();</string>
     </property>
     <property name="frameShadow">
      <enum>QFrame::Plain</enum>
@@ -202,6 +210,9 @@ border-color: rgb(0, 0, 0);
       <bold>true</bold>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url();</string>
+    </property>
     <property name="text">
      <string>MAX :</string>
     </property>
@@ -221,6 +232,9 @@ border-color: rgb(0, 0, 0);
       <bold>true</bold>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url();</string>
+    </property>
     <property name="text">
      <string>MIN :</string>
     </property>
@@ -233,6 +247,9 @@ border-color: rgb(0, 0, 0);
       <width>351</width>
       <height>20</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url();</string>
     </property>
     <property name="frameShadow">
      <enum>QFrame::Plain</enum>
@@ -249,6 +266,9 @@ border-color: rgb(0, 0, 0);
       <width>351</width>
       <height>20</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url();</string>
     </property>
     <property name="frameShadow">
      <enum>QFrame::Plain</enum>
@@ -267,7 +287,8 @@ border-color: rgb(0, 0, 0);
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(209, 209, 209);</string>
+     <string notr="true">background-color: rgb(209, 209, 209);
+background-image: url();</string>
     </property>
     <item>
      <property name="text">
@@ -305,7 +326,8 @@ border-color: rgb(0, 0, 0);
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(209, 209, 209);</string>
+     <string notr="true">background-color: rgb(209, 209, 209);
+background-image: url();</string>
     </property>
     <item>
      <property name="text">
@@ -343,7 +365,8 @@ border-color: rgb(0, 0, 0);
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(209, 209, 209);</string>
+     <string notr="true">background-color: rgb(209, 209, 209);
+background-image: url();</string>
     </property>
     <item>
      <property name="text">
@@ -376,7 +399,8 @@ border-color: rgb(0, 0, 0);
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(209, 209, 209);</string>
+     <string notr="true">background-color: rgb(209, 209, 209);
+background-image: url();</string>
     </property>
     <item>
      <property name="text">
@@ -402,6 +426,9 @@ border-color: rgb(0, 0, 0);
       <width>351</width>
       <height>20</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url();</string>
     </property>
     <property name="frameShadow">
      <enum>QFrame::Plain</enum>
@@ -452,6 +479,9 @@ border-color: rgb(0, 0, 0);
       <height>26</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url();</string>
+    </property>
     <property name="minimum">
      <number>0</number>
     </property>
@@ -470,6 +500,9 @@ border-color: rgb(0, 0, 0);
       <width>111</width>
       <height>26</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url();</string>
     </property>
     <property name="maximum">
      <number>90</number>
@@ -490,6 +523,9 @@ border-color: rgb(0, 0, 0);
       <bold>true</bold>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url();</string>
+    </property>
     <property name="text">
      <string>Price:</string>
     </property>
@@ -508,6 +544,9 @@ border-color: rgb(0, 0, 0);
       <pointsize>10</pointsize>
       <bold>true</bold>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url();</string>
     </property>
     <property name="text">
      <string>Color:</string>
@@ -528,6 +567,9 @@ border-color: rgb(0, 0, 0);
       <bold>true</bold>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url();</string>
+    </property>
     <property name="text">
      <string>brand:</string>
     </property>
@@ -546,6 +588,9 @@ border-color: rgb(0, 0, 0);
       <pointsize>10</pointsize>
       <bold>true</bold>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url();</string>
     </property>
     <property name="text">
      <string>Weight:</string>
@@ -566,6 +611,9 @@ border-color: rgb(0, 0, 0);
       <bold>true</bold>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url();</string>
+    </property>
     <property name="text">
      <string>Product Type:</string>
     </property>
@@ -584,6 +632,9 @@ border-color: rgb(0, 0, 0);
       <pointsize>10</pointsize>
       <bold>true</bold>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url();</string>
     </property>
     <property name="text">
      <string>Gender:</string>
@@ -606,6 +657,9 @@ border-color: rgb(0, 0, 0);
       <strikeout>false</strikeout>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url();</string>
+    </property>
     <property name="text">
      <string>Filters</string>
     </property>
@@ -618,6 +672,9 @@ border-color: rgb(0, 0, 0);
       <width>351</width>
       <height>16</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url();</string>
     </property>
     <property name="frameShadow">
      <enum>QFrame::Plain</enum>
@@ -644,9 +701,9 @@ border-color: rgb(0, 0, 0);
    <property name="geometry">
     <rect>
      <x>900</x>
-     <y>90</y>
+     <y>80</y>
      <width>91</width>
-     <height>21</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="font">
