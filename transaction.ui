@@ -16,7 +16,7 @@
   <property name="styleSheet">
    <string notr="true">background-color: rgb(219, 255, 252);</string>
   </property>
-  <widget class="QLineEdit" name="lineEdit">
+  <widget class="QLineEdit" name="lineEdit_card">
    <property name="geometry">
     <rect>
      <x>610</x>
@@ -29,7 +29,7 @@
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="pushButton_password">
    <property name="geometry">
     <rect>
      <x>470</x>
@@ -67,7 +67,7 @@
     <string>Card:</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_2">
+  <widget class="QLineEdit" name="lineEdit_cvv2">
    <property name="geometry">
     <rect>
      <x>610</x>
@@ -80,7 +80,7 @@
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_3">
+  <widget class="QLineEdit" name="lineEdit_year">
    <property name="geometry">
     <rect>
      <x>674</x>
@@ -93,7 +93,7 @@
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_5">
+  <widget class="QLineEdit" name="lineEdit_month">
    <property name="geometry">
     <rect>
      <x>838</x>
@@ -106,7 +106,7 @@
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_4">
+  <widget class="QLineEdit" name="lineEdit_pssword">
    <property name="geometry">
     <rect>
      <x>610</x>
@@ -119,7 +119,7 @@
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
   </widget>
-  <widget class="QCheckBox" name="checkBox">
+  <widget class="QCheckBox" name="checkBox_robot">
    <property name="geometry">
     <rect>
      <x>610</x>
@@ -147,7 +147,7 @@
     </size>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="pushButton_cancel">
    <property name="geometry">
     <rect>
      <x>370</x>
@@ -163,7 +163,7 @@
     <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_3">
+  <widget class="QPushButton" name="pushButton_payment">
    <property name="geometry">
     <rect>
      <x>500</x>
@@ -427,7 +427,7 @@ color: rgb(198, 255, 250);</string>
      <string>Price:</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_10">
+   <widget class="QLabel" name="label_name">
     <property name="geometry">
      <rect>
       <x>160</x>
@@ -449,7 +449,7 @@ color: rgb(198, 255, 250);</string>
      <string>Alireza</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_11">
+   <widget class="QLabel" name="label_phone">
     <property name="geometry">
      <rect>
       <x>160</x>
@@ -471,7 +471,7 @@ color: rgb(198, 255, 250);</string>
      <string>09140409531</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_12">
+   <widget class="QLabel" name="label_price">
     <property name="geometry">
      <rect>
       <x>160</x>

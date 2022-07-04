@@ -38,7 +38,7 @@
     <string>Card:</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit">
+  <widget class="QLineEdit" name="lineEdit_card">
    <property name="geometry">
     <rect>
      <x>120</x>
@@ -81,7 +81,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#ff0000;&quot;&gt;For this, enter your card number and press the confirm button.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="pushButton_cancel">
    <property name="geometry">
     <rect>
      <x>200</x>
@@ -97,7 +97,7 @@ p, li { white-space: pre-wrap; }
     <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="pushButton_confirm">
    <property name="geometry">
     <rect>
      <x>330</x>
