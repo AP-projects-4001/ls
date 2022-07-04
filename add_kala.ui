@@ -16,7 +16,7 @@
   <property name="styleSheet">
    <string notr="true">background-color: rgb(0, 0, 61);</string>
   </property>
-  <widget class="QCheckBox" name="checkBox">
+  <widget class="QCheckBox" name="checkBox_color">
    <property name="geometry">
     <rect>
      <x>620</x>
@@ -39,7 +39,7 @@ background-color: rgb();</string>
     <string>Color:</string>
    </property>
   </widget>
-  <widget class="QComboBox" name="comboBox">
+  <widget class="QComboBox" name="comboBox_color">
    <property name="geometry">
     <rect>
      <x>790</x>
@@ -74,7 +74,7 @@ background-color: rgb();</string>
     </property>
    </item>
   </widget>
-  <widget class="QCheckBox" name="checkBox_2">
+  <widget class="QCheckBox" name="checkBox_weight">
    <property name="geometry">
     <rect>
      <x>620</x>
@@ -97,7 +97,7 @@ background-color: rgb();</string>
     <string>Weight:</string>
    </property>
   </widget>
-  <widget class="QCheckBox" name="checkBox_3">
+  <widget class="QCheckBox" name="checkBox_gennder">
    <property name="geometry">
     <rect>
      <x>620</x>
@@ -120,7 +120,7 @@ background-color: rgb();</string>
     <string>Gender:</string>
    </property>
   </widget>
-  <widget class="QCheckBox" name="checkBox_4">
+  <widget class="QCheckBox" name="checkBox_brand">
    <property name="geometry">
     <rect>
      <x>620</x>
@@ -143,7 +143,7 @@ background-color: rgb();</string>
     <string>Brand:</string>
    </property>
   </widget>
-  <widget class="QComboBox" name="comboBox_2">
+  <widget class="QComboBox" name="comboBoxgender">
    <property name="geometry">
     <rect>
      <x>790</x>
@@ -173,7 +173,7 @@ background-color: rgb();</string>
     </property>
    </item>
   </widget>
-  <widget class="QComboBox" name="comboBox_3">
+  <widget class="QComboBox" name="comboBox_brand">
    <property name="geometry">
     <rect>
      <x>790</x>
@@ -208,7 +208,7 @@ background-color: rgb();</string>
     </property>
    </item>
   </widget>
-  <widget class="QLineEdit" name="lineEdit">
+  <widget class="QLineEdit" name="lineEdit_weight">
    <property name="geometry">
     <rect>
      <x>790</x>
@@ -244,7 +244,7 @@ background-color: rgb();</string>
     <string>Name :</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_2">
+  <widget class="QLineEdit" name="lineEdit_name">
    <property name="geometry">
     <rect>
      <x>190</x>
@@ -280,7 +280,7 @@ background-color: rgb();</string>
     <string>Price:</string>
    </property>
   </widget>
-  <widget class="QRadioButton" name="radioButton">
+  <widget class="QRadioButton" name="radioButton_Equipment">
    <property name="geometry">
     <rect>
      <x>190</x>
@@ -303,7 +303,7 @@ color: rgb(255, 170, 255);</string>
     <string>Equipment</string>
    </property>
   </widget>
-  <widget class="QRadioButton" name="radioButton_2">
+  <widget class="QRadioButton" name="radioButton_cloths">
    <property name="geometry">
     <rect>
      <x>320</x>
@@ -349,7 +349,7 @@ background-color: rgb();</string>
     <string>Product Type:</string>
    </property>
   </widget>
-  <widget class="QSpinBox" name="spinBox">
+  <widget class="QSpinBox" name="spinBox_price">
    <property name="geometry">
     <rect>
      <x>190</x>
@@ -365,7 +365,7 @@ background-color: rgb();</string>
     <number>999999999</number>
    </property>
   </widget>
-  <widget class="QWidget" name="widget" native="true">
+  <widget class="QWidget" name="widget_photo" native="true">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -375,11 +375,10 @@ background-color: rgb();</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-background-image: url(:/new/prefix1/null.png);</string>
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="pushButton_addphoto">
    <property name="geometry">
     <rect>
      <x>240</x>
@@ -396,7 +395,7 @@ background-image: url(:/new/prefix1/add photo.png);</string>
     <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="pushButton_back">
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -436,7 +435,7 @@ background-color: rgb();</string>
     <string>Number :</string>
    </property>
   </widget>
-  <widget class="QSpinBox" name="spinBox_2">
+  <widget class="QSpinBox" name="spinBox_number">
    <property name="geometry">
     <rect>
      <x>790</x>
@@ -451,6 +450,49 @@ background-color: rgb();</string>
    <property name="maximum">
     <number>999999999</number>
    </property>
+  </widget>
+  <widget class="QPushButton" name="push_buttonconfirm">
+   <property name="geometry">
+    <rect>
+     <x>500</x>
+     <y>640</y>
+     <width>131</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>confirmation</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBoxgender_mat">
+   <property name="geometry">
+    <rect>
+     <x>790</x>
+     <y>560</y>
+     <width>311</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string/>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>woody</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>glassy</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>ferrous</string>
+    </property>
+   </item>
   </widget>
  </widget>
  <resources/>

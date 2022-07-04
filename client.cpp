@@ -9,9 +9,9 @@ Client::Client(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Client)
 {
+    ui->setupUi(this);
     add_global_to_item_widget();
     show_item();
-    ui->setupUi(this);
     this->setFixedSize(1241,688);
     setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
 }

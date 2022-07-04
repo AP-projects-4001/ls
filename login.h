@@ -16,6 +16,7 @@ public:
     void check_correct_password(QString user_name,QString password);
     ~login();
 
+
 private slots:
     void on_pushButton_Creat_clicked();
 

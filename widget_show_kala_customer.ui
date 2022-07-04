@@ -29,7 +29,7 @@
     <string notr="true">background-image: url(:/new/prefix1/add_kala.png);</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit">
+  <widget class="QLineEdit" name="lineEdit_name">
    <property name="geometry">
     <rect>
      <x>370</x>
@@ -37,6 +37,9 @@
      <width>211</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QLabel" name="label_2">
@@ -58,7 +61,7 @@
     <string>Name:</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="pushButton_change">
    <property name="geometry">
     <rect>
      <x>25</x>
@@ -94,7 +97,7 @@ background-color: rgb(255, 255, 255);</string>
     <string>Color:</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_2">
+  <widget class="QLineEdit" name="lineEdit_color">
    <property name="geometry">
     <rect>
      <x>370</x>
@@ -102,6 +105,9 @@ background-color: rgb(255, 255, 255);</string>
      <width>211</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QLabel" name="label_4">
@@ -152,7 +158,7 @@ background-color: rgb(255, 255, 255);</string>
     <string>Price:</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_3">
+  <widget class="QLineEdit" name="lineEdit_price">
    <property name="geometry">
     <rect>
      <x>730</x>
@@ -160,6 +166,9 @@ background-color: rgb(255, 255, 255);</string>
      <width>211</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="readOnly">
+    <bool>false</bool>
    </property>
   </widget>
   <widget class="Line" name="line">
@@ -181,6 +190,17 @@ background-color: rgb(255, 255, 255);</string>
     <enum>Qt::Horizontal</enum>
    </property>
   </widget>
+  <zorder>spinBox</zorder>
+  <zorder>widget</zorder>
+  <zorder>lineEdit_name</zorder>
+  <zorder>label_2</zorder>
+  <zorder>pushButton_change</zorder>
+  <zorder>label_3</zorder>
+  <zorder>lineEdit_color</zorder>
+  <zorder>label_4</zorder>
+  <zorder>label_5</zorder>
+  <zorder>lineEdit_price</zorder>
+  <zorder>line</zorder>
  </widget>
  <resources/>
  <connections/>

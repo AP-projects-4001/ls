@@ -13,6 +13,7 @@ cloths::cloths(int type, QString name, QString image_file, QString Seller_userna
     id=Global::get_number_of_article();
     this->type=type;
     this->gender=gender;
+    number_sold=0;
 }
 
 QString cloths::get_gender()

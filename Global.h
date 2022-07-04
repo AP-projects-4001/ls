@@ -20,12 +20,12 @@ public:
     static QVector<Sporting_goods> vec_article_sporting_goods;
     static QVector <QPair<QPair<int,QString> , QPair<QString , int>>> vec_of_Buyer;// id usernaem date  price
     static QVector<int> Shopping_cart;
-    void load();
-    void save();
-    void load_article();
-    void save_article();
-    void save_buyer();
-    void load_buyer();
+    static void load();
+    static void save();
+    static void load_article();
+    static void save_article();
+    static void save_buyer();
+    static void load_buyer();
     static int serch_id_cloths(int id);
     static int serch_id_sporting_goods(int id);
 

@@ -10,11 +10,16 @@
 #include "test.h"
 #include"edituser.h"
 #include "widget_show_kala_customer.h"
+#include "add_kala.h"
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-   // Client x;
-   test x;
-   x.show();
+   // test x;
+    //x.show();
+    Global::load();
+    Global::load_article();
+    Global::load_buyer();
+    login *x =new login;
+    x->show();
     return a.exec();
 }

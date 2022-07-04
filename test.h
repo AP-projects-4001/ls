@@ -15,6 +15,9 @@ public:
     explicit test(QWidget *parent = nullptr);
     ~test();
 
+private slots:
+    void on_listWidget_doubleClicked(const QModelIndex &index);
+
 private:
     Ui::test *ui;
 };

@@ -7,6 +7,9 @@
 #include "time.h"
 #include "QDebug"
 #include "QMessageBox"
+#include "admin.h"
+#include "client.h"
+#include "customer.h"
 void login::check_correct_password(QString user_name, QString password)
 {
     Global glob;
@@ -29,15 +32,18 @@ void login::check_correct_password(QString user_name, QString password)
             {
                 if (glob.Active_person.get_type()==0)
                 {
-                    //admin
+                    Admin *x= new Admin(this);
+                    x->show();
                 }
                 else if(glob.Active_person.get_type()==1)
                 {
-                    //clint
+                    Client *x =  new Client(this);
+                    x->show();
                 }
                 else
                 {
-                    //customer
+                    customer *x= new customer(this);
+                    x->show();
                 }
             }
         }
@@ -99,13 +105,15 @@ void login::on_pushButton_Login_clicked()
     if (sum == x)
     {
         check_correct_password(user_name, password);
-        int a=rand()%(51);
-        int b=rand()%(51);
-        sum=a+b;
-        QString x=QString::number(a);
-        QString y=QString::number(b);
-        ui->label_4->setText("");
-        ui->label_4->setText(ui->label_4->text()+"Enter the Answer "+x+"+"+y+" =");
-        ui->lineEdit_sum->setStyleSheet("background: rgb(255,0,0);");
     }
+    int a=rand()%(51);
+    int b=rand()%(51);
+    sum=a+b;
+    QString xx=QString::number(a);
+    QString y=QString::number(b);
+    ui->label_4->setText("");
+    ui->label_4->setText(ui->label_4->text()+"Enter the Answer "+xx+"+"+y+" =");
+    ui->lineEdit_sum->setStyleSheet("background: rgb(255,0,0);");
 }
+
+

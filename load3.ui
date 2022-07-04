@@ -20,8 +20,8 @@ background-image: url();</string>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>210</x>
-     <y>120</y>
+     <x>190</x>
+     <y>100</y>
      <width>551</width>
      <height>351</height>
     </rect>

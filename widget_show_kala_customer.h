@@ -14,9 +14,22 @@ class widget_show_kala_customer : public QWidget
 public:
     explicit widget_show_kala_customer(QWidget *parent = nullptr);
     ~widget_show_kala_customer();
+    void set(int id ,QString file,QString Name, QString color , int price , int number);
+private slots:
+    void on_spinBox_valueChanged(int arg1);
+
+    void on_pushButton_change_clicked();
+
+    void on_lineEdit_price_editingFinished();
 
 private:
     Ui::widget_show_kala_customer *ui;
+    int id;
+    QString Name;
+    QString color;
+    int price;
+    int number;
+    QString file;
 };
 
 #endif // WIDGET_SHOW_KALA_CUSTOMER_H

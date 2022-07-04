@@ -25,6 +25,8 @@ public:
     int get_type();
     QString get_name();
 
+    void setImage_File(const QString &newImage_File);
+
 protected:
     int type;//0 for cloths 1 for sporting_goods
     QString name;

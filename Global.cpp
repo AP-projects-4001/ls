@@ -57,6 +57,9 @@ void Global::load_article()
     std::fstream te("save_article_file.txt" , std::ios::app);
     te.close();
     std::fstream in("save_article_file.txt" , std::ios::in);
+    std::string nc;
+    if(getline(in , nc))
+        number_of_article=stoi(nc);
     if (!in)
         return;
     else
@@ -111,7 +114,7 @@ void Global::load_article()
 void Global::save_article()
 {
     std::fstream out("save_article_file.txt" , std::ios::out);
-
+    out<<number_of_article<<"\n";
     for (int i=0;i<vec_article_cloths.size() ; i++)
     {
         out<<vec_article_cloths[i].get_type()<<"\n"

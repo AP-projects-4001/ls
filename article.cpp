@@ -98,3 +98,8 @@ QString article::get_name()
 {
     return name;
 }
+
+void article::setImage_File(const QString &newImage_File)
+{
+    image_File = newImage_File;
+}

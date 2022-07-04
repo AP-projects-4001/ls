@@ -13,6 +13,7 @@ Sporting_goods::Sporting_goods(int type, QString name, QString image_file, QStri
     id=Global::get_number_of_article();
     this->type=type;
     this->material=material;
+    number_sold=0;
 }
 
 QString Sporting_goods::get_material()
