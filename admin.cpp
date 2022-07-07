@@ -12,6 +12,8 @@ Admin::Admin(QWidget *parent) :
     ui(new Ui::Admin)
 {
     ui->setupUi(this);
+    this->setFixedSize(1241,688);
+    setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
     for(int i=0;i<Global::vec_person.size();i++)
     {
         QListWidgetItem *m_ulitems = new QListWidgetItem;

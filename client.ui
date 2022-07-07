@@ -20,7 +20,7 @@ background-image: url();</string>
   <widget class="QLineEdit" name="lineEdit_serch">
    <property name="geometry">
     <rect>
-     <x>290</x>
+     <x>280</x>
      <y>60</y>
      <width>461</width>
      <height>45</height>
@@ -34,7 +34,7 @@ background-image: url();</string>
   <widget class="QPushButton" name="pushButton_serch">
    <property name="geometry">
     <rect>
-     <x>230</x>
+     <x>220</x>
      <y>58</y>
      <width>55</width>
      <height>48</height>
@@ -51,7 +51,7 @@ background-image: url();</string>
   <widget class="QPushButton" name="pushButton_moneybags">
    <property name="geometry">
     <rect>
-     <x>800</x>
+     <x>760</x>
      <y>40</y>
      <width>81</width>
      <height>68</height>
@@ -86,7 +86,7 @@ background-image: url(:/new/prefix1/log out.png);
   <widget class="QPushButton" name="pushButton_Cart">
    <property name="geometry">
     <rect>
-     <x>1010</x>
+     <x>960</x>
      <y>40</y>
      <width>93</width>
      <height>71</height>
@@ -700,7 +700,7 @@ background-image: url();</string>
   <widget class="QLabel" name="label_price">
    <property name="geometry">
     <rect>
-     <x>900</x>
+     <x>860</x>
      <y>80</y>
      <width>91</width>
      <height>31</height>
@@ -735,6 +735,25 @@ color: rgb(255, 255, 0);</string>
    </property>
    <property name="text">
     <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>1070</x>
+     <y>70</y>
+     <width>52</width>
+     <height>42</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/new/prefix1/refresh.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F5</string>
    </property>
   </widget>
  </widget>

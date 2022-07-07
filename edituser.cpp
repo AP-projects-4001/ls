@@ -7,6 +7,8 @@ EditUser::EditUser(QWidget *parent) :
     ui(new Ui::EditUser)
 {
     ui->setupUi(this);
+    this->setFixedSize(521,331);
+    setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
 }
 
 EditUser::~EditUser()

@@ -10,6 +10,8 @@ add_kala::add_kala(QWidget *parent) :
     ui(new Ui::add_kala)
 {
     ui->setupUi(this);
+    this->setFixedSize(1241,688);
+    setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
     ui->comboBox_brand->hide();
     ui->comboBox_color->hide();
     ui->comboBoxgender_mat->hide();

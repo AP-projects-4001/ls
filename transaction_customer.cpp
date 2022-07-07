@@ -6,6 +6,8 @@ transaction_customer::transaction_customer(QWidget *parent) :
     ui(new Ui::transaction_customer)
 {
     ui->setupUi(this);
+    this->setFixedSize(601,196);
+    setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
 }
 
 transaction_customer::~transaction_customer()

@@ -6,6 +6,7 @@ factor::factor(QWidget *parent) :
     ui(new Ui::factor)
 {
     ui->setupUi(this);
+    this->setFixedSize(687,721);
     ui->dockWidgetContents->setWindowTitle("Factor");
     for(int i=0;i<Global::vec_of_Buyer.size();i++)
     {

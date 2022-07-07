@@ -11,6 +11,8 @@ Transaction::Transaction(QWidget *parent) :
     ui(new Ui::Transaction)
 {
     ui->setupUi(this);
+    this->setFixedSize(958,479);
+    setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
 }
 
 Transaction::~Transaction()

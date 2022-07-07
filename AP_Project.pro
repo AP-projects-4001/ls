@@ -22,6 +22,7 @@ SOURCES += \
     edituser.cpp \
     factor.cpp \
     forget_password.cpp \
+    game.cpp \
     load1.cpp \
     load2.cpp \
     load3.cpp \
@@ -51,6 +52,7 @@ HEADERS += \
     edituser.h \
     factor.h \
     forget_password.h \
+    game.h \
     load1.h \
     load2.h \
     load3.h \
@@ -75,6 +77,7 @@ FORMS += \
     edituser.ui \
     factor.ui \
     forget_password.ui \
+    game.ui \
     load1.ui \
     load2.ui \
     load3.ui \

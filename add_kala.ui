@@ -469,12 +469,15 @@ background-image: url();</string>
     <rect>
      <x>500</x>
      <y>640</y>
-     <width>171</width>
-     <height>29</height>
+     <width>179</width>
+     <height>33</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/new/prefix1/confirmation.png);</string>
+   </property>
    <property name="text">
-    <string>confirmation</string>
+    <string/>
    </property>
   </widget>
   <widget class="QComboBox" name="comboBoxgender_mat">

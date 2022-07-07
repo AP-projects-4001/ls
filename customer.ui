@@ -238,6 +238,25 @@ background-color: rgb();</string>
     <string/>
    </property>
   </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>52</width>
+     <height>42</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/new/prefix1/refresh.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F5</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

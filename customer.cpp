@@ -16,6 +16,8 @@ customer::customer(QWidget *parent) :
 {
 
     ui->setupUi(this);
+    this->setFixedSize(1241,688);
+    setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
     if (vec_cloths.size()>0)
            vec_cloths.clear();
     if (vec_sporting.size()>0)
