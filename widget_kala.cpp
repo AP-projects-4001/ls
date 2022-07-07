@@ -17,6 +17,7 @@ void widget_kala::set(QString phonto, QString name, QString color, int price)
 {
     ui->label_name->setText(name);
     ui->label_price->setText(QString::number(price));
-    ui->frame->setStyleSheet(phonto);
+    QString x="QWidget {background-image: url("+phonto+") ;}";
+    ui->frame->setStyleSheet(x);
 
 }

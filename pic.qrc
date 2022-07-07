@@ -44,5 +44,6 @@
         <file>factor.png</file>
         <file>Previous.png</file>
         <file>Next.png</file>
+        <file>backadmin.png</file>
     </qresource>
 </RCC>

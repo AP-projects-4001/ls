@@ -140,9 +140,9 @@ void add_kala::on_checkBox_gennder_stateChanged(int arg1)
     if(arg1)
     {
         if(type==0)
-            ui->comboBoxgender_mat->show();
-        else
             ui->comboBoxgender->show();
+        else
+            ui->comboBoxgender_mat->show();
     }
     else
     {

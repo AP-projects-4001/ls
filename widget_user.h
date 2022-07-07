@@ -14,9 +14,11 @@ class widget_user : public QWidget
 public:
     explicit widget_user(QWidget *parent = nullptr);
     ~widget_user();
+    void set(QString x);
 
 private:
     Ui::widget_user *ui;
+    QString user_name{""};
 };
 
 #endif // WIDGET_USER_H

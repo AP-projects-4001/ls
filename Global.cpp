@@ -1,10 +1,12 @@
 #include "Global.h"
 #include "sporting_goods.h"
 #include "cloths.h"
+QVector <QPair<QPair<int , QString>, QPair<QString , QString>>> Global::vec_tran;
 int Global::number_of_article=0;
+bool Global::buy=0;
 void Global::load()
 {
-
+    vec_person.clear();
     Global glob;
     std::fstream te("save.txt" , std::ios::app);
     te.close();
@@ -54,6 +56,8 @@ void Global::save()
 
 void Global::load_article()
 {
+    vec_article_cloths.clear();
+    vec_article_sporting_goods.clear();
     std::fstream te("save_article_file.txt" , std::ios::app);
     te.close();
     std::fstream in("save_article_file.txt" , std::ios::in);
@@ -154,10 +158,11 @@ void Global::save_buyer()
     std::fstream out("save_buyer.txt" , std::ios::out);
     for (int i=0;i<number_of_article ; i++)
     {
-        out<<vec_of_Buyer[i].first.first<<"\n"
-          <<vec_of_Buyer[i].first.second.toStdString()<<"\n"
-         <<vec_of_Buyer[i].second.first.toStdString()<<"\n"
-        <<vec_of_Buyer[i].second.second<<"\n";
+        out<<vec_of_Buyer[i].first<<"\n"
+           <<vec_of_Buyer[i].second.first.first<<"\n"
+          <<vec_of_Buyer[i].second.first.second.toStdString()<<"\n"
+         <<vec_of_Buyer[i].second.second.first.toStdString()<<"\n"
+        <<vec_of_Buyer[i].second.second.second<<"\n";
 
     }
     out.close();
@@ -165,6 +170,7 @@ void Global::save_buyer()
 
 void Global::load_buyer()
 {
+    vec_of_Buyer.clear();
     std::fstream te("save_buyer.txt" , std::ios::app);
     te.close();
     std::fstream in("save_buyer.txt" , std::ios::in);
@@ -172,13 +178,82 @@ void Global::load_buyer()
         return;
     else
     {
-        std::string name , id , date , price;
-        while (getline(in , id) && getline(in  , name) && getline(in , date) && getline(in, price))
+        std::string number,name , id , date , price;
+        while (getline(in,number),getline(in , id) && getline(in  , name) && getline(in , date) && getline(in, price))
         {
-            vec_of_Buyer.push_back(qMakePair(qMakePair(stoi(id) , QString::fromStdString(name)) , qMakePair(QString::fromStdString(date) , stoi(price))));
+            vec_of_Buyer.push_back(qMakePair(stoi(number),qMakePair(qMakePair(stoi(id) , QString::fromStdString(name)) , qMakePair(QString::fromStdString(date) , stoi(price)))));
         }
     }
     in .close();
+}
+
+void Global::save_vec_tran()
+{
+    std::fstream out("save_tran.txt" , std::ios::out);
+    for (int i=0;i<vec_tran.size() ; i++)
+    {
+        out<<vec_tran[i].first.first<<"\n"
+          <<vec_tran[i].first.second.toStdString()<<"\n"
+         <<vec_tran[i].second.first.toStdString()<<"\n"
+        <<vec_tran[i].second.second.toStdString()<<"\n";
+
+    }
+    out.close();
+
+}
+
+void Global::load_tran()
+{
+    vec_tran.clear();
+    std::fstream te("save_tran.txt" , std::ios::app);
+    te.close();
+    std::fstream in("save_tran.txt" , std::ios::in);
+    if (!in)
+        return;
+    else
+    {
+        std::string number,name , id , date , price;
+        while (getline(in,number),getline(in , id) && getline(in  , name) && getline(in , date))
+        {
+            vec_tran.push_back(qMakePair(qMakePair(stoi(number),QString::fromStdString(id)),qMakePair(QString::fromStdString(name),QString::fromStdString(date))));
+        }
+    }
+    in .close();
+}
+
+void Global::save_shopping_cart()
+{
+    std::string x;
+    x="save_"+Active_person.get_user_name().toStdString()+".txt";
+    std::fstream out(x , std::ios::out);
+    for (int i=0;i<Shopping_cart.size() ; i++)
+    {
+        out<<Shopping_cart[i].first<<"\n"
+          <<Shopping_cart[i].second<<"\n";
+
+    }
+    out.close();
+
+}
+
+void Global::load_shoppong_cart()
+{
+    std::string x;
+    x="save_"+Active_person.get_user_name().toStdString()+".txt";
+    std::fstream te(x , std::ios::app);
+    te.close();
+    std::fstream in(x , std::ios::in);
+    if (!in)
+        return;
+    else
+    {
+        std::string number,name;
+        while (getline(in,number),getline(in ,name))
+        {
+            Shopping_cart.push_back(qMakePair(std::stoi(number) ,std::stoi(name)));
+        }
+    }
+    in.close();
 }
 
 int Global::serch_id_cloths(int id)

@@ -21,7 +21,7 @@ background-color: rgb(255, 255, 255);</string>
    <property name="geometry">
     <rect>
      <x>650</x>
-     <y>120</y>
+     <y>140</y>
      <width>41</width>
      <height>31</height>
     </rect>
@@ -36,8 +36,8 @@ background-color: rgb(255, 255, 255);</string>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>230</x>
-     <y>120</y>
+     <x>10</x>
+     <y>150</y>
      <width>71</width>
      <height>31</height>
     </rect>
@@ -58,8 +58,8 @@ background-color: rgb(255, 255, 255);</string>
   <widget class="QLabel" name="label_price">
    <property name="geometry">
     <rect>
-     <x>310</x>
-     <y>120</y>
+     <x>90</x>
+     <y>150</y>
      <width>131</width>
      <height>31</height>
     </rect>
@@ -81,8 +81,8 @@ background-color: rgb();</string>
   <widget class="QLabel" name="label_name">
    <property name="geometry">
     <rect>
-     <x>230</x>
-     <y>20</y>
+     <x>220</x>
+     <y>0</y>
      <width>471</width>
      <height>81</height>
     </rect>
@@ -127,7 +127,7 @@ background-color: rgb();</string>
     <rect>
      <x>10</x>
      <y>180</y>
-     <width>691</width>
+     <width>700</width>
      <height>16</height>
     </rect>
    </property>
@@ -147,7 +147,7 @@ background-color: rgb();</string>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>420</x>
+     <x>220</x>
      <y>120</y>
      <width>91</width>
      <height>31</height>
@@ -169,7 +169,7 @@ background-color: rgb();</string>
   <widget class="QLabel" name="label_number">
    <property name="geometry">
     <rect>
-     <x>530</x>
+     <x>310</x>
      <y>120</y>
      <width>111</width>
      <height>31</height>
@@ -187,6 +187,28 @@ background-color: rgb();</string>
    </property>
    <property name="text">
     <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_name_2">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>50</y>
+     <width>471</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>13</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(1);</string>
+   </property>
+   <property name="text">
+    <string>username</string>
    </property>
   </widget>
  </widget>

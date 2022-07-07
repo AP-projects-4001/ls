@@ -42,6 +42,10 @@ public:
     int get_type() { return type;}
     int get_moneybags(){return moneybags;}
 
+    void setMoneybags(int newMoneybags);
+
+    void setBan(bool newBan);
+
 private:
     QString name;
     QString user_name;
@@ -53,4 +57,14 @@ private:
     int type;
     int moneybags{0};
 };
+
+inline void Person::setMoneybags(int newMoneybags)
+{
+    moneybags = newMoneybags;
+}
+
+inline void Person::setBan(bool newBan)
+{
+    ban = newBan;
+}
 #endif // PERSON_H

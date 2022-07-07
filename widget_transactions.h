@@ -14,6 +14,7 @@ class widget_transactions : public QWidget
 public:
     explicit widget_transactions(QWidget *parent = nullptr);
     ~widget_transactions();
+    void set(int price , QString username , QString type , QString Date);
 
 private:
     Ui::widget_transactions *ui;

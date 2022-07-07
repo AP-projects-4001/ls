@@ -15,9 +15,14 @@ public:
     explicit add_to_cart(QWidget *parent = nullptr);
     ~add_to_cart();
     void set(int id);
+    void admin();
 
 private slots:
     void on_pushButton_clicked();
+
+    void on_pushButton_2_clicked();
+
+    void on_pushButton_4_clicked();
 
 private:
     Ui::add_to_cart *ui;

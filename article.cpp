@@ -103,3 +103,23 @@ void article::setImage_File(const QString &newImage_File)
 {
     image_File = newImage_File;
 }
+
+void article::setName(const QString &newName)
+{
+    name = newName;
+}
+
+void article::setSeller_username(const QString &newSeller_username)
+{
+    seller_username = newSeller_username;
+}
+
+void article::setBrand_name(const QString &newBrand_name)
+{
+    brand_name = newBrand_name;
+}
+
+void article::setColor(const QString &newColor)
+{
+    color = newColor;
+}

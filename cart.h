@@ -18,6 +18,8 @@ public:
 private slots:
     void on_pushButton_close_clicked();
     void on_pushButton_romove_clicked();
+    void on_pushButton_buy_clicked();
+
 private:
     Ui::Cart *ui;
     void show_item();

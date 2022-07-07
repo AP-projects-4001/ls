@@ -15,6 +15,11 @@ public:
     explicit transaction_customer(QWidget *parent = nullptr);
     ~transaction_customer();
 
+private slots:
+    void on_pushButton_confirm_clicked();
+
+    void on_pushButton_cancel_clicked();
+
 private:
     Ui::transaction_customer *ui;
 };

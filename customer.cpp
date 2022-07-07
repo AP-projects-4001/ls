@@ -4,7 +4,8 @@
 #include "login.h"
 #include "widget_show_kala_customer.h"
 #include "QListWidgetItem"
-
+#include "factor.h"
+#include "transaction_customer.h"
 QVector<cloths> customer::vec_cloths;
 QVector<Sporting_goods> customer::vec_sporting;
 QVector <int> customer::id;
@@ -15,6 +16,10 @@ customer::customer(QWidget *parent) :
 {
 
     ui->setupUi(this);
+    if (vec_cloths.size()>0)
+           vec_cloths.clear();
+    if (vec_sporting.size()>0)
+            vec_sporting.clear();
     for (int i=0;i<Global::vec_article_cloths.size();i++)
     {
         if (Global::vec_article_cloths[i].get_seller_username()==Global::Active_person.get_user_name())
@@ -106,6 +111,7 @@ void customer::setSize_of_widget(int newSize_of_widget)
 
 void customer::show_item()
 {
+    ui->label_mooney->setText(QString::number(Global::Active_person.get_moneybags()));
     if(size_of_widget!=0)
     {
         ui->listWidget->clear();
@@ -137,4 +143,32 @@ void customer::show_item()
 }
 
 
+
+
+void customer::on_pushButton_3_clicked()
+{
+    factor * f=new factor;
+    f->show();
+}
+
+
+void customer::on_pushButton_clicked()
+{
+    transaction_customer *x=new transaction_customer;
+    x->show();
+    if(Global::buy==1)
+    {
+        Global::buy=0;
+        Global::Active_person.setMoneybags(0);
+        for(int i=0;i<Global::vec_person.size();i++)
+        {
+            if(Global::Active_person.get_user_name()==Global::vec_person[i].get_user_name())
+            {
+                Global::vec_person[i].setMoneybags(0);
+            }
+        }
+        Global::save();
+        ui->label_mooney->setText(QString::number(Global::Active_person.get_moneybags()));
+    }
+}
 

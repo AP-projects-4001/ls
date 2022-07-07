@@ -12,3 +12,8 @@ widget_user::~widget_user()
 {
     delete ui;
 }
+
+void widget_user::set(QString x)
+{
+    ui->label_username->setText(x);
+}

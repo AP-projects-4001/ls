@@ -358,7 +358,7 @@ color: rgb(198, 255, 250);</string>
      <enum>Qt::Vertical</enum>
     </property>
    </widget>
-   <widget class="QLabel" name="label_6">
+   <widget class="QLabel" name="label_seller">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -471,27 +471,20 @@ color: rgb(198, 255, 250);</string>
      <string>09140409531</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_price">
+   <widget class="QLineEdit" name="lineEdit_price">
     <property name="geometry">
      <rect>
-      <x>160</x>
+      <x>150</x>
       <y>240</y>
-      <width>181</width>
-      <height>31</height>
+      <width>191</width>
+      <height>28</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <pointsize>15</pointsize>
-      <bold>true</bold>
-     </font>
-    </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb();
-color: rgb(0, 255, 0);</string>
+     <string notr="true">color: rgb(0, 85, 0);</string>
     </property>
     <property name="text">
-     <string>1000000000000000000</string>
+     <string>0</string>
     </property>
    </widget>
   </widget>

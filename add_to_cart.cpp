@@ -2,6 +2,9 @@
 #include "ui_add_to_cart.h"
 #include<QMovie>
 #include "Global.h"
+#include "QMessageBox"
+#include "client.h"
+#include "admin.h""
 add_to_cart::add_to_cart(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::add_to_cart),
@@ -26,6 +29,8 @@ add_to_cart::~add_to_cart()
 void add_to_cart::set(int id)
 {
     this->id=id;
+    ui->pushButton->show();
+    ui->pushButton_2->show();
     if(Global::serch_id_cloths(id)!=-1)
     {
         int index=Global::serch_id_cloths(id);
@@ -37,6 +42,9 @@ void add_to_cart::set(int id)
         ui->label_coler->setText(Global::vec_article_cloths[index].get_color());
         ui->label_brand->setText(Global::vec_article_cloths[index].get_brand_name());
         ui->label_other->setText(Global::vec_article_cloths[index].get_gender());
+        QString file=Global::vec_article_cloths[index].get_image_file();
+        QString x="QWidget {background-image: url("+file+") ;}";
+        ui->widget->setStyleSheet(x);
     }
     else if(Global::serch_id_sporting_goods(id)!=-1)
     {
@@ -49,18 +57,52 @@ void add_to_cart::set(int id)
         ui->label_coler->setText(Global::vec_article_sporting_goods[index].get_color());
         ui->label_brand->setText(Global::vec_article_sporting_goods[index].get_brand_name());
         ui->label_other->setText(Global::vec_article_sporting_goods[index].get_material());
+        QString file=Global::vec_article_sporting_goods[index].get_image_file();
+        QString x="QWidget {background-image: url("+file+") ;}";
+        ui->widget->setStyleSheet(x);
     }
+}
+
+void add_to_cart::admin()
+{
+    ui->pushButton_4->show();
+    ui->pushButton->hide();
+    ui->pushButton_2->hide();
+    ui->spinBox->hide();
 }
 
 void add_to_cart::on_pushButton_clicked()
 {
     if(Global::serch_id_cloths(id)!=-1)
     {
-        Global::Shopping_cart.push_back(id);
+        Global::Shopping_cart.push_back(qMakePair(id , ui->spinBox->value()));
     }
     else if(Global::serch_id_sporting_goods(id)!=-1)
     {
-        Global::Shopping_cart.push_back(id);
+        Global::Shopping_cart.push_back(qMakePair(id , ui->spinBox->value()));
     }
+    QMessageBox *x=new QMessageBox;
+    x->setText("added");
+    x->exec();
+    this->close();
+    Client *y= new Client;
+    y->show();
+}
+
+
+
+void add_to_cart::on_pushButton_2_clicked()
+{
+    this->close();
+    Client *y= new Client;
+    y->show();
+}
+
+
+void add_to_cart::on_pushButton_4_clicked()
+{
+    Admin *x=new Admin;
+    x->show();
+    this->close();
 }
 

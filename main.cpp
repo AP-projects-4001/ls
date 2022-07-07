@@ -14,7 +14,7 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-   // test x;
+    //test x;
     //x.show();
     Global::load();
     Global::load_article();

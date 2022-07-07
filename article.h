@@ -27,6 +27,14 @@ public:
 
     void setImage_File(const QString &newImage_File);
 
+    void setName(const QString &newName);
+
+    void setSeller_username(const QString &newSeller_username);
+
+    void setBrand_name(const QString &newBrand_name);
+
+    void setColor(const QString &newColor);
+
 protected:
     int type;//0 for cloths 1 for sporting_goods
     QString name;

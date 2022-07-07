@@ -14,9 +14,20 @@ class EditUser : public QDialog
 public:
     explicit EditUser(QWidget *parent = nullptr);
     ~EditUser();
+    void set(int ind);
+
+private slots:
+    void on_pushButton_Save_clicked();
+
+    void on_pushButton_Delete_clicked();
+
+    void on_pushButton_Ban_clicked();
+
+    void on_pushButton_Cancel_clicked();
 
 private:
     Ui::EditUser *ui;
+    int ind;
 };
 
 #endif // EDITUSER_H
