@@ -64,8 +64,10 @@ void EditUser::on_pushButton_Ban_clicked()
         QMessageBox *x=new QMessageBox;
         x->setText("baned");
         x->exec();
-        Global::vec_person[ind].setBan(0);
+        Global::vec_person[ind].setBan(1);
     }
+    Global::save();
+    this->close();
 }
 
 

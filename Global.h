@@ -37,6 +37,8 @@ public:
 
     static int get_number_of_article();
 
+    static void setNumber_of_article(int newNumber_of_article);
+
 private:
     static int number_of_article;
 

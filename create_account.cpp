@@ -63,7 +63,9 @@ void Create_account::on_buttonBox_accepted()
         qm->setText("phone number must be have 11 digits");
         qm->exec();
     }
-    if ((!mail.toStdString().find(".com") || !mail.toStdString().find("@")) && create_successfully)
+    int t1=mail.toStdString().find(".com");
+    int t2=mail.toStdString().find("@");
+    if ((t1==-1 || t2==-1) && (create_successfully))
     {
         create_successfully=0;
         QMessageBox *qm=new QMessageBox(this);

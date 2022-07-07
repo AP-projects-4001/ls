@@ -32,18 +32,22 @@ void login::check_correct_password(QString user_name, QString password)
             {
                 if (glob.Active_person.get_type()==0)
                 {
-                    Admin *x= new Admin(this);
+                    Admin *x= new Admin();
                     x->show();
+                    this->close();
                 }
                 else if(glob.Active_person.get_type()==1)
                 {
-                    Client *x =  new Client(this);
+                    Global::load_shoppong_cart();
+                    Client *x =  new Client();
                     x->show();
+                    this->close();
                 }
                 else
                 {
-                    customer *x= new customer(this);
+                    customer *x= new customer();
                     x->show();
+                    this->close();
                 }
             }
         }

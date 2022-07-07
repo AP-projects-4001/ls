@@ -156,7 +156,7 @@ void Global::save_article()
 void Global::save_buyer()
 {
     std::fstream out("save_buyer.txt" , std::ios::out);
-    for (int i=0;i<number_of_article ; i++)
+    for (int i=0;i<vec_of_Buyer.size() ; i++)
     {
         out<<vec_of_Buyer[i].first<<"\n"
            <<vec_of_Buyer[i].second.first.first<<"\n"
@@ -276,4 +276,9 @@ int Global::serch_id_sporting_goods(int id)
 int Global::get_number_of_article()
 {
     return number_of_article;
+}
+
+void Global::setNumber_of_article(int newNumber_of_article)
+{
+    number_of_article = newNumber_of_article;
 }

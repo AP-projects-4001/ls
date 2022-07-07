@@ -232,6 +232,9 @@ background-image: url();</string>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
+   <property name="text">
+    <string>0</string>
+   </property>
   </widget>
   <widget class="QLabel" name="label">
    <property name="geometry">

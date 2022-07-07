@@ -42,9 +42,9 @@ Admin::Admin(QWidget *parent) :
         QListWidgetItem *m_ulitems = new QListWidgetItem;
         widget_transactions *m = new widget_transactions;
         m->set(Global::vec_tran[i].first.first,Global::vec_tran[i].first.second,Global::vec_tran[i].second.first , Global::vec_tran[i].second.second);
-        ui->listWidget_user->addItem(m_ulitems);
-        m_ulitems->setSizeHint(QSize(291,53));
-        ui->listWidget_user->setItemWidget(m_ulitems,m);
+        ui->listWidget_Transactions->addItem(m_ulitems);
+        m_ulitems->setSizeHint(QSize(420,109));
+        ui->listWidget_Transactions->setItemWidget(m_ulitems,m);
     }
 }
 
@@ -88,13 +88,14 @@ void Admin::on_listWidget_commodity_itemDoubleClicked(QListWidgetItem *item)
     x->set(vec_id_kala[ind]);
     x->admin();
     x->show();
+    this->close();
 }
 
 
 void Admin::on_pushButton_log_out_clicked()
 {
-    login *x=new login();
     this->close();
+    login *x=new login();
     x->show();
 }
 

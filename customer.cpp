@@ -27,7 +27,6 @@ customer::customer(QWidget *parent) :
         if (Global::vec_article_cloths[i].get_seller_username()==Global::Active_person.get_user_name())
         {
             vec_cloths.push_back(Global::vec_article_cloths[i]);
-            id.push_back(Global::vec_article_cloths[i].get_id());
         }
     }
     for (int i=0;i<Global::vec_article_sporting_goods.size();i++)
@@ -35,7 +34,6 @@ customer::customer(QWidget *parent) :
         if (Global::vec_article_sporting_goods[i].get_seller_username()==Global::Active_person.get_user_name())
         {
             vec_sporting.push_back(Global::vec_article_sporting_goods[i]);
-            id.push_back(Global::vec_article_sporting_goods[i].get_id());
 
         }
     }
@@ -61,8 +59,6 @@ void customer::on_pushButton_4_clicked()
     int index=ui->listWidget->currentRow();
     if (index!=-1)
     {
-        QListWidgetItem *x=ui->listWidget->currentItem();
-        delete x;
         for(int i=0;i<vec_cloths.size();i++)
         {
             if(vec_cloths[i].get_id()==id[index])
@@ -85,9 +81,7 @@ void customer::on_pushButton_4_clicked()
                     Global::vec_article_sporting_goods.remove(ind);
             }
         }
-        id.remove(index);
         Global::save_article();
-        size_of_widget--;
         show_item();
     }
 }
@@ -118,6 +112,7 @@ void customer::show_item()
     {
         ui->listWidget->clear();
         size_of_widget=0;
+        id.clear();
     }
     size_of_widget=vec_cloths.size()+vec_sporting.size();
     if(size_of_widget>0)
@@ -130,6 +125,7 @@ void customer::show_item()
              ui->listWidget->addItem(m_ulitems);
              m_ulitems->setSizeHint(QSize(1031,218));
              ui->listWidget->setItemWidget(m_ulitems,m);
+             id.push_back(vec_cloths[i].get_id());
 
         }
         for(int i=0;i<vec_sporting.size();i++)
@@ -140,6 +136,7 @@ void customer::show_item()
             ui->listWidget->addItem(m_ulitems);
             m_ulitems->setSizeHint(QSize(1031,218));
             ui->listWidget->setItemWidget(m_ulitems,m);
+            id.push_back(vec_sporting[i].get_id());
         }
     }
 }
@@ -149,7 +146,7 @@ void customer::show_item()
 
 void customer::on_pushButton_3_clicked()
 {
-    factor * f=new factor;
+    factor *f=new factor;
     f->show();
 }
 

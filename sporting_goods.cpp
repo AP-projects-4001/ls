@@ -10,7 +10,8 @@ Sporting_goods::Sporting_goods(int type, QString name, QString image_file, QStri
     weight=Weight;
     price=Price;
     stock=Stock;
-    id=Global::get_number_of_article();
+    id=Global::get_number_of_article()+1;
+    Global::setNumber_of_article(id);
     this->type=type;
     this->material=material;
     number_sold=0;

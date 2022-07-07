@@ -6,6 +6,7 @@
 #include <QTextStream>
 #include <QTime>
 #include <QDate>
+#include "client.h"
 Transaction::Transaction(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Transaction)
@@ -68,11 +69,14 @@ void Transaction::on_pushButton_payment_clicked()
                     Global::save();
                 }
             }
+            Global::save_vec_tran();
             this->close();
+            Client *x=new Client;
+            x->show();
         }
         else
         {
-
+            ui->lineEdit_pssword->setStyleSheet("background: rgb(255,0,0);");
         }
     }
     else
@@ -90,10 +94,14 @@ void Transaction::on_pushButton_payment_clicked()
                     Global::save();
                 }
             }
+            Global::save_vec_tran();
             this->close();
+            Client *x=new Client;
+            x->show();
         }
         else
         {
+            ui->lineEdit_pssword->setStyleSheet("background: rgb(255,0,0);");
 
         }
     }

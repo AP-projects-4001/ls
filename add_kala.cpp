@@ -18,6 +18,7 @@ add_kala::add_kala(QWidget *parent) :
     ui->comboBoxgender->hide();
     ui->lineEdit_weight->hide();
     ui->checkBox_gennder->hide();
+    file=":/new/prefix1/null.png";
 }
 
 add_kala::~add_kala()
@@ -37,6 +38,8 @@ void add_kala::on_pushButton_addphoto_clicked()
 {
     QString fileName = QFileDialog::getOpenFileName(this,"open",QDir::homePath());
     file=fileName;
+    if (file=="")
+        file=":/new/prefix1/null.png";
     QString x="QWidget {background-image: url("+file+") ;}";
     ui->widget_photo->setStyleSheet(x);
 }

@@ -4,7 +4,7 @@
 #include "Global.h"
 #include "QMessageBox"
 #include "client.h"
-#include "admin.h""
+#include "admin.h"
 add_to_cart::add_to_cart(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::add_to_cart),
@@ -19,6 +19,7 @@ add_to_cart::add_to_cart(QWidget *parent) :
      ui->label_9->setMovie(movie1);
      movie1->start();
      movie->start();
+     ui->pushButton_4->hide();
 }
 
 add_to_cart::~add_to_cart()
@@ -45,6 +46,7 @@ void add_to_cart::set(int id)
         QString file=Global::vec_article_cloths[index].get_image_file();
         QString x="QWidget {background-image: url("+file+") ;}";
         ui->widget->setStyleSheet(x);
+        ui->spinBox->setMaximum(Global::vec_article_cloths[index].get_stock());
     }
     else if(Global::serch_id_sporting_goods(id)!=-1)
     {
@@ -60,6 +62,7 @@ void add_to_cart::set(int id)
         QString file=Global::vec_article_sporting_goods[index].get_image_file();
         QString x="QWidget {background-image: url("+file+") ;}";
         ui->widget->setStyleSheet(x);
+        ui->spinBox->setMaximum(Global::vec_article_sporting_goods[index].get_stock());
     }
 }
 
@@ -76,10 +79,13 @@ void add_to_cart::on_pushButton_clicked()
     if(Global::serch_id_cloths(id)!=-1)
     {
         Global::Shopping_cart.push_back(qMakePair(id , ui->spinBox->value()));
+        Global::vec_article_cloths[Global::serch_id_cloths(id)].set_stock(Global::vec_article_cloths[Global::serch_id_cloths(id)].get_stock()-ui->spinBox->value());
     }
     else if(Global::serch_id_sporting_goods(id)!=-1)
     {
         Global::Shopping_cart.push_back(qMakePair(id , ui->spinBox->value()));
+        Global::vec_article_sporting_goods[Global::serch_id_sporting_goods(id)].set_stock(Global::vec_article_sporting_goods[Global::serch_id_sporting_goods(id)].get_stock()-ui->spinBox->value());
+
     }
     QMessageBox *x=new QMessageBox;
     x->setText("added");

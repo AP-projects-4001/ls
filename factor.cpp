@@ -38,10 +38,13 @@ void factor::show_item(int index)
     if(index<0||index>=ind.size())
     {
         if(index<0)
-            now=0;
+            index=0;
         else
-            now=ind.size()-1;
+            index=ind.size()-1;
     }
+    if(Global::vec_of_Buyer.size()!=0)
+    {
+
         ui->label_time->setText(Global::vec_of_Buyer[ind[index]].second.second.first);
         ui->label_name->setText(Global::vec_of_Buyer[ind[index]].second.first.second);
         if(Global::serch_id_cloths(Global::vec_of_Buyer[ind[index]].second.first.first))
@@ -55,6 +58,7 @@ void factor::show_item(int index)
         ui->label_Quantiy->setText(QString::number(Global::vec_of_Buyer[ind[index]].first));
         ui->label_price->setText(QString::number(Global::vec_of_Buyer[ind[index]].second.second.second));
         ui->label_total->setText(QString::number(Global::vec_of_Buyer[ind[index]].first*Global::vec_of_Buyer[ind[index]].second.second.second));
+    }
 }
 
 
