@@ -31,4 +31,5 @@ Our program consists of 6 main sections which are introduced below:
 
 To run our program, you must first install it using the installer and then use it by creating a user account.
 I hope you enjoy the environment of the program and find it useful
-Goodbye 😀😀
+
+Goodbye. 😀😀
