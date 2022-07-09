@@ -16,6 +16,9 @@ public:
     ~EditUser();
     void set(int ind);
 
+    int getIndex_vector() const;
+    void setIndex_vector(int newIndex_vector);
+
 private slots:
     void on_pushButton_Save_clicked();
 
@@ -28,6 +31,7 @@ private slots:
 private:
     Ui::EditUser *ui;
     int ind;
+    int index_vector;
 };
 
 #endif // EDITUSER_H

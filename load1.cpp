@@ -3,11 +3,11 @@
 #include"login.h"
 #include "article.h"
 QVector <Person>Global::vec_person;
-Person Global::Active_person;
+Person Global::Active_person[20];
 QVector <cloths>Global::vec_article_cloths;
 QVector <QPair <int ,QPair<QPair<int,QString> , QPair<QString , int>>>> Global::vec_of_Buyer;
 QVector<Sporting_goods> Global::vec_article_sporting_goods;
-QVector<QPair<int , int > > Global::Shopping_cart;
+QVector<QPair<int , int > > Global::Shopping_cart[20];
 load1::load1(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::load1)
@@ -18,9 +18,9 @@ load1::load1(QWidget *parent) :
     timer1 = new QTimer (this);
     timer2 = new QTimer (this);
     connect(timer1,SIGNAL(timeout()),this,SLOT(updat()));
-    timer1->start(0);
+    timer1->start(80);
     connect(timer2,SIGNAL(timeout()),this,SLOT(close_this()));
-    timer2->start(80);
+    timer2->start(8000);
 }
 
 

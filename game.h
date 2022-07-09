@@ -14,6 +14,9 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    int getIndex_vector() const;
+    void setIndex_vector(int newIndex_vector);
+
 private slots:
     void on_pushButton_clicked();
     void close_this();
@@ -27,5 +30,6 @@ private:
      QMovie* movie;
      QTimer *timer2;
      QTimer *timer1;
+     int index_vector;
 };
 #endif // GAME_H

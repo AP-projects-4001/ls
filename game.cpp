@@ -2,6 +2,9 @@
 #include "ui_game.h"
 #include <QPalette>
 #include<windows.h>
+#include "Global.h"
+#include "client.h"
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -17,6 +20,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->label_3->hide();
     ui->verticalSlider->hide();
 }
+bool popo=0;
 MainWindow::~MainWindow()
 {
     delete ui;
@@ -61,6 +65,7 @@ void MainWindow::close_this()
 
 void MainWindow::update()
 {
+    popo=0;
     if(0<ui->progressBar->value() && 10>=ui->progressBar->value())
     {
         if(ui->label_3->x()<510 && ui->label_3->y() >480)
@@ -111,13 +116,15 @@ void MainWindow::update()
                  ui->label_3->setGeometry(ui->label_3->x()+2,ui->label_3->y()+1, 51, 31);
             else
             {
+                popo=1;
                 ui->label_3->hide();
-                Sleep(100);
                 ui->label_4->setStyleSheet("background-image: url(:/new/prefix1/Screenshot_2022-07-07_011802-removebg-preview.png);");
                 ui->label_4->show();
                 ui->pushButton_2->show();
                 ui->label->hide();
-                ui->label_2->hide();            }
+                ui->label_2->hide();
+
+            }
         }
     }
     else if(30<ui->progressBar->value() && 40>=ui->progressBar->value())
@@ -151,7 +158,7 @@ void MainWindow::update()
             ui->label->hide();
             ui->label_2->hide();
         }
-    }      
+    }
 }
 void MainWindow::on_pushButton_3_clicked()
 {
@@ -165,8 +172,49 @@ void MainWindow::on_pushButton_3_clicked()
   ui->label_3->show();
   ui->verticalSlider->show();
 }
+
+int MainWindow::getIndex_vector() const
+{
+    return index_vector;
+}
+
+void MainWindow::setIndex_vector(int newIndex_vector)
+{
+    index_vector = newIndex_vector;
+}
 void MainWindow::on_pushButton_2_clicked()
 {
+    if(popo)
+    {
+        Global::Active_person[index_vector].setMoneybags(Global::Active_person[index_vector].get_moneybags()+50);
+        for(int i=0;i<Global::vec_person.size();i++)
+        {
+            if (Global::vec_person[i].get_user_name()==Global::Active_person[index_vector].get_user_name())
+            {
+                Global::vec_person[i].setMoneybags(Global::Active_person[index_vector].get_moneybags()+50);
+            }
+        }
+    }
+    Global::save_all();
+    std::string x;
+    x="save_"+Global::Active_person[index_vector].get_user_name().toStdString()+".txt";
+    std::fstream te(x , std::ios::app);
+    te.close();
+    std::fstream in(x , std::ios::in);
+    if (!in)
+        return;
+    else
+    {
+        std::string number,name;
+        while (getline(in,number),getline(in ,name))
+        {
+            Global::Shopping_cart[index_vector].push_back(qMakePair(std::stoi(number) ,std::stoi(name)));
+        }
+    }
+    in.close();
+    Client *xx =  new Client(index_vector);
+    xx->setIndex_vector(index_vector);
+    xx->show();
     this->close();
 }
 

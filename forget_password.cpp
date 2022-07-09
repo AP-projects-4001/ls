@@ -48,3 +48,13 @@ void forget_password::on_buttonBox_accepted()
     }
 
 }
+
+int forget_password::getIndex_vector() const
+{
+    return index_vector;
+}
+
+void forget_password::setIndex_vector(int newIndex_vector)
+{
+    index_vector = newIndex_vector;
+}

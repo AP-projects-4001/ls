@@ -10,18 +10,20 @@
 #include "admin.h"
 #include "client.h"
 #include "customer.h"
+#include "game.h"
+#include "mythered.h"
+bool exit1=0;
 void login::check_correct_password(QString user_name, QString password)
 {
     Global glob;
-    bool exit1=0;
+    exit1=0;
     for(int i=0;i<glob.vec_person.size();i++)
     {
         QString u=glob.vec_person[i].get_user_name() , p=glob.vec_person[i].get_password();
         if(user_name==u && password==p)
         {
             exit1=1;
-            glob.Active_person=glob.vec_person[i];
-            if(glob.Active_person.get_ban())
+            if(glob.vec_person[i].get_ban())
             {
                 QMessageBox *qm = new QMessageBox(this);
                 qm->setText("Account Baned");
@@ -30,24 +32,23 @@ void login::check_correct_password(QString user_name, QString password)
             }
             else
             {
-                if (glob.Active_person.get_type()==0)
+                if (glob.vec_person[i].get_type()==0)
                 {
-                    Admin *x= new Admin();
-                    x->show();
-                    this->close();
+                    mythered *x=new mythered;
+                    x->set(0,glob.vec_person[i]);
+                    x->run();
                 }
-                else if(glob.Active_person.get_type()==1)
+                else if(glob.vec_person[i].get_type()==1)
                 {
-                    Global::load_shoppong_cart();
-                    Client *x =  new Client();
-                    x->show();
-                    this->close();
+                    mythered *x=new mythered;
+                    x->set(1,glob.vec_person[i]);
+                    x->run();
                 }
                 else
                 {
-                    customer *x= new customer();
-                    x->show();
-                    this->close();
+                    mythered *x=new mythered;
+                    x->set(2,glob.vec_person[i]);
+                    x->run();
                 }
             }
         }
@@ -65,6 +66,11 @@ login::login(QWidget *parent) :
 {
     this->setFixedSize(954,581);
     ui->setupUi(this);
+    setWindowTitle("AP_Store2022");
+    Global::load();
+    Global::load_article();
+    Global::load_buyer();
+    Global::load_tran();
     srand(time(0));
     int a=rand()%(51);
     int b=rand()%(51);
@@ -75,6 +81,7 @@ login::login(QWidget *parent) :
     ui->label_4->setText("Enter the Answer "+x+"+"+y+" =");
     ui->lineEdit_sum->hide();
     ui->lineEdit_sum->show();
+
 }
 
 
@@ -101,14 +108,44 @@ void login::on_commandLinkButton_clicked()
 
 void login::on_pushButton_Login_clicked()
 {
+
     QString password , user_name;
     user_name=ui->lineEdit_name->text();
     password = ui->lineEdit_password->text();
     int x=ui->lineEdit_sum->text().toInt();
-
     if (sum == x)
     {
+            ui->lineEdit_sum->setStyleSheet("background: rgb(255,255,255);");
+    }
+    if (!(ui->lineEdit_name->text().isEmpty()&& ui->lineEdit_password->text().isEmpty()))
+    {
+        ui->lineEdit_name->setStyleSheet("background: rgb(255,255,255);");
+        ui->lineEdit_password->setStyleSheet("background: rgb(255,255,255);");
+    }
+    if ((ui->lineEdit_name->text().isEmpty()&& ui->lineEdit_password->text().isEmpty()))
+    {
+        ui->lineEdit_name->setStyleSheet("background: rgb(255,0,0);");
+        ui->lineEdit_password->setStyleSheet("background: rgb(255,0,0);");
+    }
+    else if (ui->lineEdit_password->text().isEmpty())
+    {
+        ui->lineEdit_name->setStyleSheet("background: rgb(255,255,255);");
+        ui->lineEdit_password->setStyleSheet("background: rgb(255,0,0);");
+    }
+    else if(ui->lineEdit_name->text().isEmpty())
+    {
+        ui->lineEdit_password->setStyleSheet("background: rgb(255,255,255);");
+        ui->lineEdit_name->setStyleSheet("background: rgb(255,0,0);");
+    }
+
+    else if (sum == x)
+    {
+        ui->lineEdit_sum->setStyleSheet("background: rgb(255,255,255);");
         check_correct_password(user_name, password);
+    }
+    if(sum!=x)
+    {
+        ui->lineEdit_sum->setStyleSheet("background: rgb(255,0,0);");
     }
     int a=rand()%(51);
     int b=rand()%(51);
@@ -117,7 +154,6 @@ void login::on_pushButton_Login_clicked()
     QString y=QString::number(b);
     ui->label_4->setText("");
     ui->label_4->setText(ui->label_4->text()+"Enter the Answer "+xx+"+"+y+" =");
-    ui->lineEdit_sum->setStyleSheet("background: rgb(255,0,0);");
 }
 
 

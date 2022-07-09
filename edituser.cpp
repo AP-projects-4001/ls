@@ -2,6 +2,7 @@
 #include "ui_edituser.h"
 #include "Global.h"
 #include "qmessagebox.h"
+#include "admin.h"
 EditUser::EditUser(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::EditUser)
@@ -46,6 +47,7 @@ void EditUser::on_pushButton_Delete_clicked()
     Global::vec_person.remove(ind);
     Global::save();
     this->close();
+
 }
 
 
@@ -74,5 +76,15 @@ void EditUser::on_pushButton_Ban_clicked()
 void EditUser::on_pushButton_Cancel_clicked()
 {
     this->close();
+}
+
+int EditUser::getIndex_vector() const
+{
+    return index_vector;
+}
+
+void EditUser::setIndex_vector(int newIndex_vector)
+{
+    index_vector = newIndex_vector;
 }
 
